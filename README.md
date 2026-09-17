@@ -8,12 +8,7 @@
 
 </div>
 
-> [!IMPORTANT]
-> A living list of **currently open** undergraduate scholarships, with extra attention to computer science, software, STEM, women in tech, first-generation students, immigrant students, and local awards. Discovery uses [CareerOneStop Scholarship Finder](https://www.careeronestop.org/Toolkit/Training/find-scholarships.aspx) and keeps only awards that have a **sponsor apply link** (not Bold.org-style on-site applications). Deadlines move. Always confirm amount, eligibility, and dates on the **apply page** before you submit.
 
-This list is generated from [`data/scholarships.json`](data/scholarships.json). Do not hand-edit the tables below — run the Python script instead.
-
----
 
 ## How to Read This List
 
