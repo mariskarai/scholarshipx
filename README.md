@@ -2,32 +2,10 @@
 
 # Scholarshipx
 
-### Undergraduate scholarships you can actually apply to — CS, STEM, first-gen, immigrant, and local awards in one table.
 
 [![Last Updated](https://img.shields.io/github/last-commit/mariskarai/scholarshipx?style=for-the-badge&label=Last%20Updated&color=00C853&labelColor=000000)](https://github.com/mariskarai/scholarshipx/commits/main)
 
 </div>
-
-> [!IMPORTANT]
-> A living list of **currently open** undergraduate scholarships, with extra attention to computer science, software, STEM, women in tech, first-generation students, immigrant students, and local awards. Discovery uses [CareerOneStop Scholarship Finder](https://www.careeronestop.org/Toolkit/Training/find-scholarships.aspx) and keeps only awards that have a **sponsor apply link** (not Bold.org-style on-site applications). Deadlines move. Always confirm amount, eligibility, and dates on the **apply page** before you submit.
-
-This list is generated from [`data/scholarships.json`](data/scholarships.json). Do not hand-edit the tables below — run the Python script instead.
-
----
-
-## How to Read This List
-
-**Status** — where the scholarship is in its cycle:
-
-| Badge | Meaning |
-| ----- | ------- |
-| ✅ **[OPEN]** | Applications are open right now |
-| 🔥 **[CLOSING SOON]** | Deadline is within about 2 weeks |
-| ⏳ **[OPENS SOON]** | Next cycle is not open yet — watch the date |
-
-**Apply** — the blue button goes to the **sponsor's own page**, not an aggregator. Awards that only apply on Bold.org or similar boards are skipped.
-
----
 
 ## Table of Contents
 
