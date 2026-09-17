@@ -1,0 +1,152 @@
+# Discovery sources that point to the sponsor's own apply page.
+# Skip Bold.org / Unigo / Scholarships360-style boards where you only apply on the aggregator.
+# Skip comment boards, wikis, and LLM/chat pages — scraped HTML is untrusted.
+#
+# Prefer university, state, community-foundation, and professional-society portals.
+# Those have smaller, eligibility-gated pools (KU students, Kansas residents,
+# local geography, or paid membership) and you apply on the sponsor site.
+
+listing_sites:
+  # University of Kansas — KU students only
+  - name: KU AcademicWorks UKASH
+    url: https://ku.academicworks.com/
+    section: General Undergraduate
+  - name: KU Financial Aid Scholarships
+    url: https://financialaid.ku.edu/understand-aid/scholarships
+    section: General Undergraduate
+  - name: KU School of Engineering Scholarships
+    url: https://engr.ku.edu/undergraduate-scholarships
+    section: STEM & Engineering
+  - name: KU Engineering Current Student Scholarships
+    url: https://engr.ku.edu/impact-and-belonging-scholarships
+    section: STEM & Engineering
+  - name: KU EECS Scholarships
+    url: https://eecs.ku.edu/scholarships
+    section: Computer Science & Software
+
+  # Kansas state programs — Kansas residents
+  - name: Kansas Board of Regents Scholarships
+    url: https://kansasregents.gov/students/student_financial_aid/scholarships_and_grants
+    section: First-generation & Immigrant
+
+  # Local community / credit-union awards — county or membership gated
+  - name: Greater Kansas City Community Foundation Scholarships
+    url: https://gkccf.academicworks.com/
+    section: Leadership & Community
+  - name: Topeka Community Foundation College Scholarships
+    url: https://topekacommunityfoundation.org/college-students-apply-here
+    section: Leadership & Community
+  - name: Heartland Credit Union Education Scholarship
+    url: https://www.hcu.coop/scholarship
+    section: Leadership & Community
+
+  # Professional societies — membership or ABET-program gated
+  - name: SWE Scholarships
+    url: https://swe.org/apply-for-a-swe-scholarship/
+    section: Women in STEM / Tech
+  - name: SWE Kansas City Section Scholarship
+    url: https://swe.org/scholarships/swe-kansas-city-section-scholarship/
+    section: Women in STEM / Tech
+  - name: SWE Section-Selected Scholarships
+    url: https://swe.org/scholarships/swe-scholarships-by-section/
+    section: Women in STEM / Tech
+  - name: SHPE ScholarSHPE
+    url: https://shpe.org/engage/programs/scholarshpe/
+    section: STEM & Engineering
+  - name: NSBE Scholarships
+    url: https://nsbe.org/scholarships/
+    section: STEM & Engineering
+  - name: AFCEA STEM Majors Scholarships
+    url: https://www.afcea.org/stem-majors-scholarships
+    section: Computer Science & Software
+  - name: IEEE Computer Society Merwin Scholarship
+    url: https://www.computer.org/volunteering/awards/scholarships/merwin
+    section: Computer Science & Software
+  - name: UPE ACM Scholarships
+    url: https://upe.acm.org/scholarship/
+    section: Computer Science & Software
+
+  - name: CareerOneStop Computer Science
+    url: https://www.careeronestop.org/Toolkit/Training/find-scholarships.aspx?keyword=computer%20science&awardTypefilter=Scholarship&studyLevelfilter=Bachelor~J~s%20Degree
+    section: Computer Science & Software
+  - name: CareerOneStop Software Engineering
+    url: https://www.careeronestop.org/Toolkit/Training/find-scholarships.aspx?keyword=software%20engineering&awardTypefilter=Scholarship&studyLevelfilter=Bachelor~J~s%20Degree
+    section: Computer Science & Software
+  - name: CareerOneStop Women Computing
+    url: https://www.careeronestop.org/Toolkit/Training/find-scholarships.aspx?keyword=women%20computing&awardTypefilter=Scholarship&studyLevelfilter=Bachelor~J~s%20Degree
+    section: Women in STEM / Tech
+  - name: CareerOneStop Women STEM
+    url: https://www.careeronestop.org/Toolkit/Training/find-scholarships.aspx?keyword=women%20STEM&awardTypefilter=Scholarship&studyLevelfilter=Bachelor~J~s%20Degree
+    section: Women in STEM / Tech
+  - name: CareerOneStop First Generation
+    url: https://www.careeronestop.org/Toolkit/Training/find-scholarships.aspx?keyword=first%20generation&awardTypefilter=Scholarship&studyLevelfilter=Bachelor~J~s%20Degree
+    section: First-generation & Immigrant
+  - name: CareerOneStop Immigrant
+    url: https://www.careeronestop.org/Toolkit/Training/find-scholarships.aspx?keyword=immigrant&awardTypefilter=Scholarship&studyLevelfilter=Bachelor~J~s%20Degree
+    section: First-generation & Immigrant
+  - name: CareerOneStop Kansas
+    url: https://www.careeronestop.org/Toolkit/Training/find-scholarships.aspx?keyword=Kansas&awardTypefilter=Scholarship&studyLevelfilter=Bachelor~J~s%20Degree
+    section: Leadership & Community
+  - name: CareerOneStop Engineering
+    url: https://www.careeronestop.org/Toolkit/Training/find-scholarships.aspx?keyword=engineering&awardTypefilter=Scholarship&studyLevelfilter=Bachelor~J~s%20Degree
+    section: STEM & Engineering
+  - name: CareerOneStop Business
+    url: https://www.careeronestop.org/Toolkit/Training/find-scholarships.aspx?keyword=business&awardTypefilter=Scholarship&studyLevelfilter=Bachelor~J~s%20Degree
+    section: Business & FinTech
+
+search_queries:
+  - site:ku.academicworks.com undergraduate scholarship computer science
+  - site:ku.academicworks.com engineering scholarship
+  - site:ku.academicworks.com first generation scholarship
+  - site:engr.ku.edu undergraduate scholarship
+  - site:eecs.ku.edu scholarship
+  - site:kansasregents.gov scholarship undergraduate first generation
+  - site:gkccf.academicworks.com scholarship Kansas
+  - site:topekacommunityfoundation.org college scholarship
+  - site:swe.org scholarship Kansas City computing
+  - site:shpe.org ScholarSHPE undergraduate
+  - site:nsbe.org scholarship computer science
+  - site:afcea.org STEM scholarship undergraduate
+  - site:computer.org Merwin scholarship
+  - site:upe.acm.org scholarship
+  - site:hcu.coop scholarship
+  - site:careeronestop.org computer science undergraduate scholarship
+  - site:careeronestop.org women computing scholarship
+  - site:careeronestop.org first generation scholarship
+  - site:careeronestop.org Kansas scholarship undergraduate
+  - site:careeronestop.org immigrant student scholarship
+
+prefer_domains:
+  - ku.academicworks.com
+  - financialaid.ku.edu
+  - engr.ku.edu
+  - eecs.ku.edu
+  - ukash.ku.edu
+  - kansasregents.gov
+  - gkccf.academicworks.com
+  - topekacommunityfoundation.org
+  - hcu.coop
+  - swe.org
+  - shpe.org
+  - nsbe.org
+  - afcea.org
+  - computer.org
+  - upe.acm.org
+  - careeronestop.org
+
+# Apply buttons must NOT land on these hosts. CareerOneStop is discovery-only.
+blocked_apply_domains:
+  - bold.org
+  - scholarships360.org
+  - unigo.com
+  - scholarships.com
+  - fastweb.com
+  - niche.com
+  - goingmerry.com
+  - scholarshipowl.com
+  - sallie.com
+  - localscholarships.org
+  - scholarshipsthatwork.com
+  - chegg.com
+  - cappex.com
+  - careeronestop.org

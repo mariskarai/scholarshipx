@@ -1,0 +1,67 @@
+from __future__ import annotations
+
+import argparse
+
+from scholarshipx.discover import discover
+from scholarshipx.render import render
+from scholarshipx.status import refresh_status
+from scholarshipx.store import load_scholarships, save_scholarships
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(
+        prog="scholarshipx",
+        description="Discover scholarships from listing sites and render GitHub tables.",
+    )
+    sub = parser.add_subparsers(dest="command", required=True)
+
+    discover_parser = sub.add_parser("discover", help="Scrape listing sites and merge new scholarships")
+    discover_parser.add_argument("--max-new", type=int, default=15, help="Cap on newly added verified rows")
+    discover_parser.add_argument(
+        "--no-search",
+        action="store_true",
+        help="Only fetch configured listing pages, skip DuckDuckGo",
+    )
+
+    sub.add_parser("status", help="Recompute OPEN / CLOSING SOON / OPENS SOON from deadlines")
+    sub.add_parser("render", help="Rebuild README.md and ARCHIVE.md from JSON")
+
+    args = parser.parse_args(argv)
+
+    if args.command == "discover":
+        report = discover(max_new=args.max_new, use_search=not args.no_search)
+        render()
+        print(
+            "Discovery complete: "
+            f"{report['pages_fetched']} pages, "
+            f"{report['verified']} verified, "
+            f"{report['rejected']} rejected, "
+            f"{report['added']} added, "
+            f"{report['total']} total. "
+            "README updated."
+        )
+        return 0
+
+    if args.command == "status":
+        items = refresh_status(load_scholarships())
+        save_scholarships(items)
+        open_count = sum(1 for item in items if item.status == "OPEN")
+        closing = sum(1 for item in items if item.status == "CLOSING_SOON")
+        soon = sum(1 for item in items if item.status == "OPENS_SOON")
+        expired = sum(1 for item in items if item.status == "EXPIRED")
+        print(
+            f"Status updated: {open_count} open, {closing} closing soon, "
+            f"{soon} opens soon, {expired} expired."
+        )
+        return 0
+
+    if args.command == "render":
+        report = render()
+        print(
+            f"Rendered {report['active']} active scholarships to README.md "
+            f"and {report['archived']} archived to ARCHIVE.md."
+        )
+        return 0
+
+    parser.error("unknown command")
+    return 2

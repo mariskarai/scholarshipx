@@ -1,0 +1,14 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.env
+.DS_Store
+Thumbs.db
+dist/
+build/
+_probe_*.py
+careeronestop_*.html
+
