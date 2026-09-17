@@ -8,7 +8,12 @@
 
 </div>
 
+> [!IMPORTANT]
+> A living list of **currently open** undergraduate scholarships, with extra attention to computer science, software, STEM, women in tech, first-generation students, immigrant students, and local awards. Discovery uses [CareerOneStop Scholarship Finder](https://www.careeronestop.org/Toolkit/Training/find-scholarships.aspx) and keeps only awards that have a **sponsor apply link** (not Bold.org-style on-site applications). Deadlines move. Always confirm amount, eligibility, and dates on the **apply page** before you submit.
 
+This list is generated from [`data/scholarships.json`](data/scholarships.json). Do not hand-edit the tables below — run the Python script instead.
+
+---
 
 ## How to Read This List
 
@@ -53,6 +58,7 @@
 | ✅ **[OPEN]** | Golen Engine Scholarship | Golen Engine Service | $500 | Undergrad · STEM | <a href="http://golenengineservice.com"><img src="https://img.shields.io/badge/Apply-blue?style=for-the-badge" alt="Apply"></a> | November 30. |
 | ✅ **[OPEN]** | ASHARE Undergraduate Engineering Scholarships | American Society of Heating, Refrigerating and Air-Conditioning | $3,000 $10,000 | Undergrad · STEM · Undergraduate | <a href="http://www.ashrae.org"><img src="https://img.shields.io/badge/Apply-blue?style=for-the-badge" alt="Apply"></a> | December 1. |
 | ✅ **[OPEN]** | Decommissioning and Environmental Science Division Scholarship | American Nuclear Society | $2,000 $3,000 | Undergrad | <a href="http://www.ans.org"><img src="https://img.shields.io/badge/Apply-blue?style=for-the-badge" alt="Apply"></a> | February 1. |
+| ✅ **[OPEN]** | Engineering Study Abroad Scholarship Application | ku.academicworks.com | $500 | Undergrad · STEM | <a href="https://ku.academicworks.com/opportunities/48928"><img src="https://img.shields.io/badge/Apply-blue?style=for-the-badge" alt="Apply"></a> | Check site |
 
 ## Women in STEM / Tech
 
@@ -77,13 +83,25 @@
 | Status | Scholarship | Organization | Amount | Tags | Apply | Deadline |
 | ------ | ----------- | ------------ | ------ | ---- | ----- | -------- |
 | ✅ **[OPEN]** | H.G. Hardbarger Science - Mathematics Award | Parkersburg Area Community Foundation | Unknown | Undergrad · STEM | <a href="https://pacfwv.com"><img src="https://img.shields.io/badge/Apply-blue?style=for-the-badge" alt="Apply"></a> | Mar 1, 2027 |
+| ✅ **[OPEN]** | Hixson Opportunity Award | ku.academicworks.com | $6,000 | Undergrad · Kansas | <a href="https://ku.academicworks.com/opportunities/49933"><img src="https://img.shields.io/badge/Apply-blue?style=for-the-badge" alt="Apply"></a> | Check site |
 | ✅ **[OPEN]** | Ronald Phillips Memorial Science Scholarship | Community Foundation for Southwest Washington | $2,500 | Undergrad | <a href="http://www.cfsww.org"><img src="https://img.shields.io/badge/Apply-blue?style=for-the-badge" alt="Apply"></a> | Check site |
+| ✅ **[OPEN]** | University of Kansas Award & Scholarships Hub (UKASH) | ku.academicworks.com | Unknown | Undergrad · Kansas | <a href="https://ku.academicworks.com/"><img src="https://img.shields.io/badge/Apply-blue?style=for-the-badge" alt="Apply"></a> | Check site |
 
 ## General Undergraduate
 
 | Status | Scholarship | Organization | Amount | Tags | Apply | Deadline |
 | ------ | ----------- | ------------ | ------ | ---- | ----- | -------- |
-| — | None yet | — | — | — | — | — |
+| ✅ **[OPEN]** | Emergency Grant Application | ku.academicworks.com | $500 | Undergrad | <a href="https://ku.academicworks.com/opportunities/49837"><img src="https://img.shields.io/badge/Apply-blue?style=for-the-badge" alt="Apply"></a> | Check site |
+| ✅ **[OPEN]** | EOF Child Care Grant 2026-2027 | ku.academicworks.com | Unknown | Undergrad | <a href="https://ku.academicworks.com/opportunities/49931"><img src="https://img.shields.io/badge/Apply-blue?style=for-the-badge" alt="Apply"></a> | Check site |
+| ✅ **[OPEN]** | Financial Aid & Scholarships | financialaid.ku.edu | Unknown | Undergrad | <a href="https://financialaid.ku.edu/"><img src="https://img.shields.io/badge/Apply-blue?style=for-the-badge" alt="Apply"></a> | Check site |
+| ✅ **[OPEN]** | FIRST Robotics Scholarship | ku.academicworks.com | $1,000 | Undergrad | <a href="https://ku.academicworks.com/opportunities/48926"><img src="https://img.shields.io/badge/Apply-blue?style=for-the-badge" alt="Apply"></a> | Check site |
+| ✅ **[OPEN]** | Honors Opportunity Award | ku.academicworks.com | $250 | Undergrad | <a href="https://ku.academicworks.com/opportunities/43667"><img src="https://img.shields.io/badge/Apply-blue?style=for-the-badge" alt="Apply"></a> | Check site |
+| ✅ **[OPEN]** | Samuel Porritt Rehab Excellence Scholarship Application | ku.academicworks.com | $0 | Undergrad | <a href="https://ku.academicworks.com/opportunities/49842"><img src="https://img.shields.io/badge/Apply-blue?style=for-the-badge" alt="Apply"></a> | Check site |
+| ✅ **[OPEN]** | Spencer Duncan Make It Count Military & Veteran Book Scholarship | ku.academicworks.com | $250 | Undergrad | <a href="https://ku.academicworks.com/opportunities/49649"><img src="https://img.shields.io/badge/Apply-blue?style=for-the-badge" alt="Apply"></a> | Check site |
+| ✅ **[OPEN]** | Transfer scholarships | admissions.ku.edu | Unknown | Undergrad · Undergraduate | <a href="https://admissions.ku.edu/transfer-scholarships"><img src="https://img.shields.io/badge/Apply-blue?style=for-the-badge" alt="Apply"></a> | Check site |
+| ✅ **[OPEN]** | TRIO Grant Application | ku.academicworks.com | Unknown | Undergrad | <a href="https://ku.academicworks.com/opportunities/48932"><img src="https://img.shields.io/badge/Apply-blue?style=for-the-badge" alt="Apply"></a> | Check site |
+| ✅ **[OPEN]** | Undergraduate Research Awards | ku.academicworks.com | $1,000 | Undergrad · Undergraduate | <a href="https://ku.academicworks.com/opportunities/49893"><img src="https://img.shields.io/badge/Apply-blue?style=for-the-badge" alt="Apply"></a> | Check site |
+| ✅ **[OPEN]** | Ward Allen Scholarship | ku.academicworks.com | $1,000 | Undergrad | <a href="https://ku.academicworks.com/opportunities/49641"><img src="https://img.shields.io/badge/Apply-blue?style=for-the-badge" alt="Apply"></a> | Check site |
 
 
 ---
