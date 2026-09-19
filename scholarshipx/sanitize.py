@@ -47,6 +47,10 @@ def markdown_cell(text: str) -> str:
     return sanitize_text(text, limit=160) or "—"
 
 
+def html_text(text: str, limit: int = 160) -> str:
+    return html.escape(sanitize_text(text, limit=limit) or "—")
+
+
 def prepare_html(html_text: str) -> BeautifulSoup:
     soup = BeautifulSoup(html_text or "", "lxml")
     for tag in soup(UNSAFE_TAGS):

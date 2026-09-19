@@ -4,8 +4,8 @@ import argparse
 
 from scholarshipx.discover import discover
 from scholarshipx.render import render
-from scholarshipx.status import refresh_status
-from scholarshipx.store import load_scholarships, save_scholarships
+from scholarshipx.status import refresh_conference_status, refresh_status
+from scholarshipx.store import load_conferences, load_scholarships, save_conferences, save_scholarships
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -45,21 +45,25 @@ def main(argv: list[str] | None = None) -> int:
     if args.command == "status":
         items = refresh_status(load_scholarships())
         save_scholarships(items)
+        conferences = refresh_conference_status(load_conferences())
+        save_conferences(conferences)
         open_count = sum(1 for item in items if item.status == "OPEN")
         closing = sum(1 for item in items if item.status == "CLOSING_SOON")
         soon = sum(1 for item in items if item.status == "OPENS_SOON")
         expired = sum(1 for item in items if item.status == "EXPIRED")
+        grant_open = sum(1 for item in conferences if item.status in {"OPEN", "CLOSING_SOON"})
         print(
             f"Status updated: {open_count} open, {closing} closing soon, "
-            f"{soon} opens soon, {expired} expired."
+            f"{soon} opens soon, {expired} expired scholarships; "
+            f"{grant_open} conference grants still in window."
         )
         return 0
 
     if args.command == "render":
         report = render()
         print(
-            f"Rendered {report['active']} active scholarships to README.md "
-            f"and {report['archived']} archived to ARCHIVE.md."
+            f"Rendered {report['active']} scholarships and {report['conferences']} conferences to README.md "
+            f"({report['archived']} + {report['archived_conferences']} archived)."
         )
         return 0
 

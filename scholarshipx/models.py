@@ -18,7 +18,18 @@ SECTIONS = [
 STATUS_OPEN = "OPEN"
 STATUS_CLOSING_SOON = "CLOSING_SOON"
 STATUS_OPENS_SOON = "OPENS_SOON"
+STATUS_GRANT_CLOSED = "GRANT_CLOSED"
 STATUS_EXPIRED = "EXPIRED"
+
+CONFERENCE_SECTIONS = [
+    "Computing & Open Source",
+    "Engineering",
+    "Sciences & Research",
+    "Business",
+    "Women in STEM / Tech",
+    "First-generation & Immigrant",
+    "Leadership & Community",
+]
 
 UNKNOWN = "Unknown"
 CHECK_SITE = "Check site"
@@ -56,6 +67,38 @@ class Scholarship:
 
     @classmethod
     def from_dict(cls, data: dict[str, Any]) -> Scholarship:
+        known = {key: data[key] for key in cls.__dataclass_fields__ if key in data}
+        return cls(**known)
+
+
+@dataclass
+class Conference:
+    id: str
+    name: str
+    organization: str
+    official_url: str
+    grant_url: str
+    grant_type: str
+    grant_covers: str = UNKNOWN
+    when: str = UNKNOWN
+    location: str = UNKNOWN
+    section: str = "Computing & Open Source"
+    status: str = STATUS_OPEN
+    tags: list[str] = field(default_factory=list)
+    deadline: str | None = None
+    deadline_display: str = UNKNOWN
+    event_start: str | None = None
+    event_end: str | None = None
+    expected_open: str | None = None
+    notes: str = ""
+    source: str = ""
+    date_found: str = ""
+
+    def to_dict(self) -> dict[str, Any]:
+        return asdict(self)
+
+    @classmethod
+    def from_dict(cls, data: dict[str, Any]) -> Conference:
         known = {key: data[key] for key in cls.__dataclass_fields__ if key in data}
         return cls(**known)
 

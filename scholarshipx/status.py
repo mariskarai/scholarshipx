@@ -1,14 +1,18 @@
 from __future__ import annotations
 
 import re
-from datetime import date, datetime, timedelta
+from datetime import date, timedelta
 from urllib.parse import urlparse
+
+from typing import Protocol
 
 from scholarshipx.models import (
     STATUS_CLOSING_SOON,
     STATUS_EXPIRED,
+    STATUS_GRANT_CLOSED,
     STATUS_OPEN,
     STATUS_OPENS_SOON,
+    Conference,
     Scholarship,
 )
 
@@ -145,7 +149,14 @@ def format_deadline(value: date | None, fallback: str = "Check site") -> str:
     return value.strftime("%b %d, %Y")
 
 
-def compute_status(item: Scholarship, today: date | None = None) -> str:
+class HasDeadline(Protocol):
+    deadline: str | None
+    deadline_display: str
+    expected_open: str | None
+    status: str
+
+
+def compute_status(item: HasDeadline, today: date | None = None) -> str:
     now = today or date.today()
     if item.expected_open:
         opens = parse_deadline(item.expected_open, today=now)
@@ -180,6 +191,29 @@ def refresh_status(items: list[Scholarship], today: date | None = None) -> list[
             source = item.deadline_display
         parsed = parse_deadline(source, today=today)
         item.status = compute_status(item, today=today)
+        if parsed and (not item.deadline or not re.fullmatch(r"20\d{2}-\d{2}-\d{2}", item.deadline)):
+            item.deadline = parsed.isoformat()
+        if parsed and item.deadline_display in {"Unknown", "Check site", ""}:
+            item.deadline_display = format_deadline(parsed)
+    return items
+
+
+def refresh_conference_status(items: list[Conference], today: date | None = None) -> list[Conference]:
+    now = today or date.today()
+    for item in items:
+        display = (item.deadline_display or "").lower()
+        source = item.deadline
+        if not source and display and not display.startswith("opens "):
+            source = item.deadline_display
+        parsed = parse_deadline(source, today=now)
+        event_end = parse_deadline(item.event_end, today=now)
+        next_cycle = parse_deadline(item.expected_open, today=now)
+        if event_end and event_end < now:
+            item.status = STATUS_OPENS_SOON if next_cycle and next_cycle > now else STATUS_EXPIRED
+        elif parsed and parsed < now:
+            item.status = STATUS_GRANT_CLOSED
+        else:
+            item.status = compute_status(item, today=now)
         if parsed and (not item.deadline or not re.fullmatch(r"20\d{2}-\d{2}-\d{2}", item.deadline)):
             item.deadline = parsed.isoformat()
         if parsed and item.deadline_display in {"Unknown", "Check site", ""}:

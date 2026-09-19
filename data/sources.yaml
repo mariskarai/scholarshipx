@@ -93,6 +93,8 @@ listing_sites:
   - name: CareerOneStop Business
     url: https://www.careeronestop.org/Toolkit/Training/find-scholarships.aspx?keyword=business&awardTypefilter=Scholarship&studyLevelfilter=Bachelor~J~s%20Degree
     section: Business & FinTech
+  - name: local scholarships
+    url: https://jlvcollegecounseling.com/scholarships/september-scholarships/
 
 search_queries:
   - site:ku.academicworks.com undergraduate scholarship computer science
@@ -133,6 +135,44 @@ prefer_domains:
   - computer.org
   - upe.acm.org
   - careeronestop.org
+
+conference_sites:
+  - name: BadgeUp undergraduate conference list
+    url: https://github.com/Jose-Gael-Cruz-Lopez/BadgeUp
+    section: Computing & Open Source
+  - name: KubeCon NA Scholarships and Travel Funding
+    url: https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/attend/scholarships-travel-funding/
+    section: Computing & Open Source
+  - name: NeurIPS Financial Assistance
+    url: https://neurips.cc/Conferences/2026/FinancialAssistance
+    section: Computing & Open Source
+  - name: WiCyS 2027 Scholarships
+    url: https://www.wicys.org/events/wicys-2027/wicys-2027-scholarships/
+    section: Women in STEM / Tech
+  - name: ACM-W Conference Scholarships
+    url: https://women.acm.org/scholarships/
+    section: Computing & Open Source
+  - name: AAAI-27 Undergraduate Consortium
+    url: https://aaai.org/conference/aaai/aaai-27/undergraduate-consortium-call-for-participation/
+    section: Computing & Open Source
+  - name: USENIX Conference Grants
+    url: https://www.usenix.org/conferences/grants
+    section: Computing & Open Source
+  - name: GHC Scholarships
+    url: https://ghc.anitab.org/awards-programs/scholarships
+    section: Women in STEM / Tech
+  - name: SACNAS Travel Scholarships
+    url: https://www.sacnas.org/conference/travel-scholarships
+    section: Engineering
+  - name: AISES Travel Scholarships
+    url: https://conference.aises.org/attendees/travel-scholarships
+    section: Engineering
+  - name: ABRCMS Travel Award
+    url: https://abrcms.org/present-at-abrcms/apply-for-a-travel-award/
+    section: Sciences & Research
+  - name: CUR Undergraduate Conference Awards
+    url: https://www.cur.org/membership-community/honors-awards/student-awards/
+    section: Sciences & Research
 
 # Apply buttons must NOT land on these hosts. CareerOneStop is discovery-only.
 blocked_apply_domains:
