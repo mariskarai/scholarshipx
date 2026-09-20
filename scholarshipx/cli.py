@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 
 from scholarshipx.discover import discover
+from scholarshipx.notion import format_notion_cli_summary
 from scholarshipx.render import render
 from scholarshipx.status import refresh_conference_status, refresh_status
 from scholarshipx.store import load_conferences, load_scholarships, save_conferences, save_scholarships
@@ -30,7 +31,7 @@ def main(argv: list[str] | None = None) -> int:
 
     if args.command == "discover":
         report = discover(max_new=args.max_new, use_search=not args.no_search)
-        render()
+        rendered = render()
         print(
             "Discovery complete: "
             f"{report['pages_fetched']} pages, "
@@ -40,6 +41,7 @@ def main(argv: list[str] | None = None) -> int:
             f"{report['total']} total. "
             "README updated."
         )
+        print(format_notion_cli_summary(rendered["notion_path"], rendered["notion_summary"]))
         return 0
 
     if args.command == "status":
@@ -63,9 +65,9 @@ def main(argv: list[str] | None = None) -> int:
         report = render()
         print(
             f"Rendered {report['active']} scholarships and {report['conferences']} conferences to README.md "
-            f"({report['archived']} + {report['archived_conferences']} archived; "
-            f"{report['notion']} Notion rows)."
+            f"({report['archived']} + {report['archived_conferences']} archived)."
         )
+        print(format_notion_cli_summary(report["notion_path"], report["notion_summary"]))
         return 0
 
     parser.error("unknown command")
