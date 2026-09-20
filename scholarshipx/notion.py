@@ -91,10 +91,22 @@ DISQUALIFY_PATTERNS = (
     re.compile(r"\bdependents\b"),
     re.compile(r"child[\s-]?care"),
     re.compile(r"children of employees"),
+    re.compile(r"child of (an? )?(employee|associate|staff)"),
     re.compile(r"employee'?s? child"),
+    re.compile(r"parent/?legal guardian"),
+    re.compile(r"legal guardian.{0,40}(employ|work)"),
     re.compile(r"parent (is |must be )?(employed|works)"),
     re.compile(r"parent works"),
     re.compile(r"must be (an? )?employee"),
+    re.compile(r"employer (relationship|affiliation|sponsorship)"),
+    re.compile(r"\bdependent\b"),
+    re.compile(r"high school senior"),
+    re.compile(r"graduating (high school )?senior"),
+    re.compile(r"hillcrest"),
+    re.compile(r"\bnuclear\b"),
+    re.compile(r"decommissioning"),
+    re.compile(r"american nuclear society"),
+    re.compile(r"chemical engineering"),
     re.compile(r"(?:from|at|attend(?:ing)?)\s+[a-z][a-z .'-]{1,40} high school"),
     re.compile(r"incoming[, ]+(first[- ]year|freshman)"),
     re.compile(r"first[- ]year (ku |students )?only"),
@@ -130,17 +142,45 @@ EXCLUSIVE_MAJOR_TOKENS = {
     "nursing": ("nursing", "nurse"),
     "medical": ("medical-only", "pre-med", "premed", "medicine", "nursing"),
     "hvac": ("hvac", "heating", "refrigerat", "air-conditioning", "air conditioning"),
+    "nuclear": ("nuclear", "decommissioning"),
 }
 
 BROAD_KEEP_IN_MAJOR = (
     "computer",
     "software",
     "computing",
-    "engineer",
     "stem",
     "technolog",
-    "math",
 )
+
+SPECIFIC_PATH_TOKENS = (
+    "scholarship",
+    "scholarships",
+    "award",
+    "awards",
+    "grant",
+    "grants",
+    "opportunity",
+    "opportunities",
+    "apply",
+    "application",
+    "foundation",
+    "student",
+    "funding",
+    "financial-aid",
+    "financialaid",
+    "financial_aid",
+)
+
+HOMEPAGE_PATHS = {
+    "",
+    "/",
+    "/index.html",
+    "/index.htm",
+    "/index.php",
+    "/home",
+    "/default.aspx",
+}
 
 OTHER_GEO = (
     re.compile(r"parkersburg"),
@@ -218,12 +258,44 @@ def _amount(raw: Any) -> int | None:
     return None
 
 
-def _website(record: dict[str, Any]) -> str | None:
+def _safe_urls(record: dict[str, Any]) -> list[str]:
+    urls: list[str] = []
+    seen: set[str] = set()
     for key in ("official_url", "listing_url"):
-        url = record.get(key)
-        if isinstance(url, str) and _is_safe_http_url(url.strip()):
-            return url.strip()
-    return None
+        raw = record.get(key)
+        if not isinstance(raw, str):
+            continue
+        url = raw.strip()
+        if not _is_safe_http_url(url) or url in seen:
+            continue
+        seen.add(url)
+        urls.append(url)
+    return urls
+
+
+def is_specific_scholarship_url(url: str) -> bool:
+    if not isinstance(url, str) or not _is_safe_http_url(url.strip()):
+        return False
+    parsed = urlparse(url.strip())
+    host = (parsed.hostname or "").lower().removeprefix("www.")
+    path = (parsed.path or "").lower()
+    normalized_path = path.rstrip("/") or "/"
+    if host.endswith("academicworks.com"):
+        return True
+    if normalized_path in HOMEPAGE_PATHS or path.rstrip("/") in {"", "/"}:
+        return False
+    haystack = f"{path} {parsed.query or ''}".replace("-", " ").replace("_", " ").replace(".", " ")
+    compact = path.replace("-", "").replace("_", "")
+    return any(token in path or token in haystack or token.replace("-", "") in compact for token in SPECIFIC_PATH_TOKENS)
+
+
+def _website(record: dict[str, Any]) -> str | None:
+    urls = [url for url in _safe_urls(record) if not _is_blocked_apply_url(url)]
+    if not urls:
+        fallback = _safe_urls(record)
+        return fallback[0] if fallback else None
+    specific = [url for url in urls if is_specific_scholarship_url(url)]
+    return (specific or urls)[0]
 
 
 def _deadline(raw: Any) -> str | None:
@@ -380,6 +452,8 @@ def _skip_reason(record: dict[str, Any], today: date | None) -> str | None:
         return "missing_website"
     if _is_aggregator(record, website):
         return "aggregator"
+    if not is_specific_scholarship_url(website):
+        return "generic_website"
     if has_disqualifying_requirement(record):
         return "unsupported_requirement"
     if not has_relevant_lane(record):
