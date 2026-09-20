@@ -778,5 +778,32 @@
     "source": "gkccf.academicworks.com",
     "expected_open": null,
     "listing_url": "https://gkccf.academicworks.com/"
+  },
+  {
+    "id": "sgc-international-student-emergency-grant-application",
+    "name": "SGC International Student Emergency Grant Application",
+    "organization": "ku.academicworks.com",
+    "official_url": "https://ku.academicworks.com/opportunities/15409",
+    "amount": "$0",
+    "amount_value": 0,
+    "deadline": null,
+    "deadline_display": "Check site",
+    "section": "General Undergraduate",
+    "status": "OPEN",
+    "tags": [
+      "Undergrad"
+    ],
+    "eligibility": [],
+    "major_requirements": "None stated",
+    "academic_level": "Undergraduate",
+    "min_gpa": "None stated",
+    "citizenship": "None stated",
+    "essay_required": "Unknown",
+    "other_requirements": [],
+    "notes": "$0.00 SGC International Student Emergency Grant Application SGC has funding available from student fees that was not spent in the... Ended",
+    "date_found": "2026-09-20",
+    "source": "ku.academicworks.com",
+    "expected_open": null,
+    "listing_url": ""
   }
 ]
