@@ -2,8 +2,6 @@
 
 Undergraduate scholarships with a sponsor apply page, and conferences that **pay students to attend**.
 
-Listings are generated from [`data/scholarships.json`](data/scholarships.json) and [`data/conferences.json`](data/conferences.json). Do not hand-edit the tables — run the Python script. Deadlines move; confirm amount, eligibility, and dates on the official page before you submit.
-
 ## How to read this
 
 | Mark | Meaning |
@@ -12,8 +10,6 @@ Listings are generated from [`data/scholarships.json`](data/scholarships.json) a
 | Closes soon | Deadline is within about two weeks |
 | Opens soon | Next cycle is not open yet |
 | Grant closed | This cycle's grant window passed; the conference or next cycle may still be useful |
-
-Scholarship **Apply** links go to the sponsor, not Bold.org-style boards. Conference **Grant** links go to the organizer's own aid page.
 
 ## Contents
 
