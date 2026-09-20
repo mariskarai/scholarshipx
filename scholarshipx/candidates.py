@@ -31,6 +31,7 @@ def candidate_row(scored: ScoredCandidate) -> dict[str, Any]:
         "deadline": deadline,
         "source_url": item.listing_url or item.official_url,
         "source_name": item.source or item.organization,
+        "candidate_type": scored.candidate_type,
         "match_status": scored.match_status,
         "fit_score": scored.fit_score,
         "match_lanes": scored.match_lanes,
@@ -82,10 +83,12 @@ def build_profile_exports(
     today=None,
 ) -> dict[str, Any]:
     from scholarshipx.notion import export_notion_scholarships
+    from scholarshipx.profile_search import load_profile
     from scholarshipx.scoring import score_candidate
     from scholarshipx.store import save_notion_scholarships
 
-    scored = [score_candidate(item, today=today) for item in items]
+    profile = load_profile()
+    scored = [score_candidate(item, profile=profile, today=today) for item in items]
     rows = build_candidate_rows(scored)
     candidate_path = save_candidate_rows(rows)
     likely_items = [candidate.item for candidate in scored if candidate.match_status == "likely_match"]
