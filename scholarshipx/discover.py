@@ -116,9 +116,14 @@ def discover(
                 rejected += 1
                 continue
             section = section_by_url.get(normalize_url(page.url), "General Undergraduate")
-            extracted = extract_from_html(page.html, page.url, default_section=section)
-            if extracted and is_careeronestop_url(page.url):
-                extracted = enrich_details(extracted[: max_new * 2], client, today=today)
+            try:
+                extracted = extract_from_html(page.html, page.url, default_section=section)
+                if extracted and is_careeronestop_url(page.url):
+                    extracted = enrich_details(extracted[: max_new * 2], client, today=today)
+            except Exception as exc:
+                print(f"skip {page.url}: {type(exc).__name__}: {exc}")
+                rejected += 1
+                continue
             for item in extracted:
                 ok, _reason = verify(item, today=today)
                 if not ok:

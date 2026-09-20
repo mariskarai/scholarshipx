@@ -158,7 +158,10 @@ def _extract_generic(html: str, page_url: str, section: str) -> list[Scholarship
     soup = prepare_html(html)
     items: list[Scholarship] = []
     for link in soup.find_all("a", href=True):
-        href = urljoin(page_url, link["href"])
+        raw_href = link.get("href")
+        if isinstance(raw_href, (list, tuple)):
+            raw_href = raw_href[0] if raw_href else ""
+        href = urljoin(page_url, str(raw_href or ""))
         name = _clean_name(link.get_text(" ", strip=True))
         if not _looks_like_title(name):
             continue
