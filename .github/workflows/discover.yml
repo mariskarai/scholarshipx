@@ -37,5 +37,6 @@ jobs:
             echo "No listing changes"
           else
             git commit -m "Refresh scholarship listings"
-            git push
+            git pull --rebase origin "${GITHUB_REF_NAME}"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
           fi
