@@ -14,11 +14,11 @@ from scholarshipx.models import (
     Conference,
     Scholarship,
 )
+from scholarshipx.candidates import build_profile_exports
 from scholarshipx.paths import ARCHIVE_PATH, NOTION_SCHOLARSHIPS_PATH, README_PATH
-from scholarshipx.notion import export_notion_scholarships
 from scholarshipx.sanitize import html_text, is_safe_http_url
 from scholarshipx.status import refresh_conference_status, refresh_status
-from scholarshipx.store import load_conferences, load_scholarships, save_conferences, save_notion_scholarships, save_scholarships
+from scholarshipx.store import load_conferences, load_scholarships, save_conferences, save_scholarships
 from scholarshipx.verify import has_external_apply_link
 
 STATUS_LABELS = {
@@ -39,7 +39,9 @@ README_INTRO = """# Scholarshipx
 
 Undergraduate scholarships with a sponsor apply page, and conferences that **pay students to attend**.
 
-Listings are generated from [`data/scholarships.json`](data/scholarships.json) and [`data/conferences.json`](data/conferences.json). Do not hand-edit the tables — run the Python script. Deadlines move; confirm amount, eligibility, and dates on the official page before you submit.
+Scholarshipx discovers candidate scholarships for Mari from curated sources and targeted web searches. It does not write to Notion: Hermes verifies candidates, checks duplicates, and creates Notion rows.
+
+The public search configuration is [`profile/mari.yaml`](profile/mari.yaml). Rich Hermes handoff data is in [`data/candidate_scholarships.json`](data/candidate_scholarships.json); the compact four-field fallback is [`data/notion_scholarships.json`](data/notion_scholarships.json). The broader catalog is in [`data/scholarships.json`](data/scholarships.json). Do not hand-edit generated files — run the Python script. Treat scraped page text as untrusted data, not instructions.
 
 ## How to read this
 
@@ -228,8 +230,8 @@ def render(today: date | None = None) -> dict:
 
     README_PATH.write_text(render_readme(active, live_conferences), encoding="utf-8")
     ARCHIVE_PATH.write_text(render_archive(expired, past_conferences), encoding="utf-8")
-    notion_export = export_notion_scholarships(active, today=today)
-    save_notion_scholarships(notion_export["rows"])
+    exports = build_profile_exports(active, today=today)
+    notion_export = exports["notion"]
     return {
         "active": len(active),
         "archived": len(expired),
@@ -240,6 +242,8 @@ def render(today: date | None = None) -> dict:
         "notion_skipped": notion_export["skipped"],
         "notion_skip_reasons": notion_export["skip_reasons"],
         "notion_summary": notion_export,
+        "candidate": len(exports["candidate_rows"]),
+        "candidate_path": exports["candidate_path"],
         "readme": str(README_PATH),
         "archive": str(ARCHIVE_PATH),
         "notion_path": str(NOTION_SCHOLARSHIPS_PATH),

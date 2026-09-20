@@ -1,0 +1,236 @@
+[
+  {
+    "name": "Hixson Opportunity Award",
+    "amount": 6000,
+    "amount_display": "$6,000",
+    "website": "https://ku.academicworks.com/opportunities/49933",
+    "deadline": "2027-02-01",
+    "source_url": "https://ku.academicworks.com/opportunities/49933",
+    "source_name": "ku.academicworks.com",
+    "match_status": "likely_match",
+    "fit_score": 0.92,
+    "match_lanes": [
+      "Kansas / KU / Kansas City",
+      "leadership / community",
+      "undergraduate"
+    ],
+    "evidence_snippet": "$6,000.00 Hixson Opportunity Award Support scholarships for University of Kansas students. Operation and... Deadline 02/01/2027",
+    "eligibility_summary": "",
+    "uncertainties": [
+      "deadline should be confirmed on the official page"
+    ],
+    "official_page_verified": true,
+    "deadline_verified": true,
+    "amount_verified": true,
+    "eligibility_verified": false,
+    "rejection_reason": null
+  },
+  {
+    "name": "University of Kansas Award & Scholarships Hub (UKASH)",
+    "amount": null,
+    "amount_display": "Unknown",
+    "website": "https://ku.academicworks.com/",
+    "deadline": null,
+    "source_url": "https://ku.academicworks.com/",
+    "source_name": "financialaid.ku.edu",
+    "match_status": "likely_match",
+    "fit_score": 0.84,
+    "match_lanes": [
+      "Kansas / KU / Kansas City",
+      "leadership / community",
+      "undergraduate"
+    ],
+    "evidence_snippet": "All students seeking additional KU scholarships can visit the University of Kansas Award & Scholarships Hub (UKASH) to search and apply for other KU scholarships.",
+    "eligibility_summary": "",
+    "uncertainties": [
+      "amount should be confirmed on the official page",
+      "deadline should be confirmed on the official page"
+    ],
+    "official_page_verified": true,
+    "deadline_verified": false,
+    "amount_verified": false,
+    "eligibility_verified": false,
+    "rejection_reason": null
+  },
+  {
+    "name": "ESA Foundation Computer and Video Game Arts and Sciences Scholarship",
+    "amount": 3000,
+    "amount_display": "$3,000",
+    "website": "https://www.theesa.com",
+    "deadline": "2027-04-30",
+    "source_url": "https://www.careeronestop.org/Toolkit/Training/find-scholarships-detail.aspx?scholarshipId=9995859",
+    "source_name": "careeronestop.org",
+    "match_status": "possible_match",
+    "fit_score": 0.78,
+    "match_lanes": [
+      "computer science",
+      "software engineering",
+      "women in tech / STEM",
+      "undergraduate"
+    ],
+    "evidence_snippet": "Women and minority students continuing education in fields supporting video game development",
+    "eligibility_summary": "Women and minority students continuing education in fields supporting video game development",
+    "uncertainties": [
+      "official URL may be a homepage rather than the application page"
+    ],
+    "official_page_verified": false,
+    "deadline_verified": true,
+    "amount_verified": true,
+    "eligibility_verified": true,
+    "rejection_reason": null
+  },
+  {
+    "name": "Greater Kansas City Community Foundation Scholarships",
+    "amount": null,
+    "amount_display": "Varies",
+    "website": "https://gkccf.academicworks.com/",
+    "deadline": null,
+    "source_url": "https://www.growyourgiving.org/resources/scholarships/",
+    "source_name": "growyourgiving.org",
+    "match_status": "possible_match",
+    "fit_score": 0.69,
+    "match_lanes": [
+      "Kansas / KU / Kansas City",
+      "leadership / community",
+      "undergraduate"
+    ],
+    "evidence_snippet": "Students in and around Kansas City",
+    "eligibility_summary": "Students in and around Kansas City",
+    "uncertainties": [
+      "amount should be confirmed on the official page",
+      "deadline should be confirmed on the official page"
+    ],
+    "official_page_verified": true,
+    "deadline_verified": false,
+    "amount_verified": false,
+    "eligibility_verified": true,
+    "rejection_reason": null
+  },
+  {
+    "name": "Dotcom-Monitor Women in Computing Scholarship",
+    "amount": 1000,
+    "amount_display": "$1,000",
+    "website": "https://www.dotcom-monitor.com",
+    "deadline": "2027-04-01",
+    "source_url": "https://www.careeronestop.org/Toolkit/Training/find-scholarships-detail.aspx?scholarshipId=9996027",
+    "source_name": "careeronestop.org",
+    "match_status": "possible_match",
+    "fit_score": 0.68,
+    "match_lanes": [
+      "computer science",
+      "women in tech / STEM",
+      "undergraduate"
+    ],
+    "evidence_snippet": "Female undergraduate students pursuing careers in computing",
+    "eligibility_summary": "Female undergraduate students pursuing careers in computing",
+    "uncertainties": [
+      "official URL may be a homepage rather than the application page"
+    ],
+    "official_page_verified": false,
+    "deadline_verified": true,
+    "amount_verified": true,
+    "eligibility_verified": true,
+    "rejection_reason": null
+  },
+  {
+    "name": "Ward Allen Scholarship",
+    "amount": 1000,
+    "amount_display": "$1,000",
+    "website": "https://ku.academicworks.com/opportunities/49641",
+    "deadline": "2026-10-01",
+    "source_url": "https://ku.academicworks.com/opportunities/49641",
+    "source_name": "ku.academicworks.com",
+    "match_status": "possible_match",
+    "fit_score": 0.55,
+    "match_lanes": [
+      "Kansas / KU / Kansas City",
+      "undergraduate"
+    ],
+    "evidence_snippet": "$1,000 Ward Allen Scholarship This fund shall be used to provide three scholarships for student... Deadline 10/01/2026",
+    "eligibility_summary": "",
+    "uncertainties": [
+      "deadline should be confirmed on the official page"
+    ],
+    "official_page_verified": true,
+    "deadline_verified": true,
+    "amount_verified": true,
+    "eligibility_verified": false,
+    "rejection_reason": null
+  },
+  {
+    "name": "Engineering Study Abroad Scholarship Application",
+    "amount": 500,
+    "amount_display": "$500",
+    "website": "https://ku.academicworks.com/opportunities/48928",
+    "deadline": "2026-11-01",
+    "source_url": "https://ku.academicworks.com/opportunities/48928",
+    "source_name": "ku.academicworks.com",
+    "match_status": "possible_match",
+    "fit_score": 0.55,
+    "match_lanes": [
+      "Kansas / KU / Kansas City",
+      "engineering",
+      "undergraduate"
+    ],
+    "evidence_snippet": "$500 - $1,500 Engineering Study Abroad Scholarship Application DEADLINES: November 1 for programs taking place during Winter Break or... Deadline 11/01/2026",
+    "eligibility_summary": "",
+    "uncertainties": [
+      "deadline should be confirmed on the official page"
+    ],
+    "official_page_verified": true,
+    "deadline_verified": true,
+    "amount_verified": true,
+    "eligibility_verified": false,
+    "rejection_reason": null
+  },
+  {
+    "name": "Undergraduate Research Awards",
+    "amount": 1000,
+    "amount_display": "$1,000",
+    "website": "https://ku.academicworks.com/opportunities/49893",
+    "deadline": "2026-11-01",
+    "source_url": "https://ku.academicworks.com/opportunities/49893",
+    "source_name": "ku.academicworks.com",
+    "match_status": "possible_match",
+    "fit_score": 0.55,
+    "match_lanes": [
+      "Kansas / KU / Kansas City",
+      "undergraduate"
+    ],
+    "evidence_snippet": "$1,000.00 Undergraduate Research Awards Undergraduate Research Awards (UGRAs) are $1,000 scholarships provided... Deadline 11/01/2026",
+    "eligibility_summary": "",
+    "uncertainties": [
+      "deadline should be confirmed on the official page"
+    ],
+    "official_page_verified": true,
+    "deadline_verified": true,
+    "amount_verified": true,
+    "eligibility_verified": false,
+    "rejection_reason": null
+  },
+  {
+    "name": "Emergency Grant Application",
+    "amount": 500,
+    "amount_display": "$500",
+    "website": "https://ku.academicworks.com/opportunities/49837",
+    "deadline": "2026-12-10",
+    "source_url": "https://ku.academicworks.com/opportunities/49837",
+    "source_name": "ku.academicworks.com",
+    "match_status": "possible_match",
+    "fit_score": 0.55,
+    "match_lanes": [
+      "Kansas / KU / Kansas City",
+      "undergraduate"
+    ],
+    "evidence_snippet": "$500 or less Emergency Grant Application The Emergency Grant Application is intended to assist currently... Deadline 12/10/2026",
+    "eligibility_summary": "",
+    "uncertainties": [
+      "deadline should be confirmed on the official page"
+    ],
+    "official_page_verified": true,
+    "deadline_verified": true,
+    "amount_verified": true,
+    "eligibility_verified": false,
+    "rejection_reason": null
+  }
+]

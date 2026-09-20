@@ -1,0 +1,63 @@
+# Public search configuration only. Private identity facts are intentionally omitted.
+student:
+  level:
+    - undergraduate
+    - senior
+  school:
+    - University of Kansas
+    - KU
+  graduation: May 2027
+  major:
+    - computer science
+
+include:
+  fields:
+    - computer science
+    - software engineering
+    - computing
+    - technology
+    - artificial intelligence
+    - data science
+    - cybersecurity
+    - business
+    - finance
+    - fintech
+    - entrepreneurship
+  identity_lanes:
+    - women in technology
+    - women in STEM
+    - first-generation
+    - immigrant
+  locations:
+    - Kansas
+    - Kansas City
+    - Lawrence
+    - University of Kansas
+    - national scholarships open to US undergraduates
+  priorities:
+    - leadership
+    - community involvement
+    - academic merit
+
+exclude:
+  - high-school-only
+  - incoming-freshman-only
+  - transfer-only
+  - graduate-only
+  - nursing-only
+  - medical-school-only
+  - chemistry-only
+  - HVAC-only
+  - nuclear-only
+  - military-only
+  - veteran-only
+  - employee-child-only
+  - disability-specific
+  - religious-affiliation-required
+  - sweepstakes
+  - no-essay-giveaways
+  - pay-to-apply
+  - aggregator-only
+
+minimum_amount: 500
+preferred_deadline_window_days: 365

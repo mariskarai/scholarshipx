@@ -6,10 +6,12 @@ from urllib.parse import urlparse
 import yaml
 
 from scholarshipx.careeronestop import enrich_details, is_careeronestop_url
+from scholarshipx.candidates import build_profile_exports
 from scholarshipx.extract import extract_from_html
 from scholarshipx.fetch import USER_AGENT, polite_fetch
 from scholarshipx.models import Scholarship
 from scholarshipx.paths import SOURCES_PATH
+from scholarshipx.profile_search import generate_profile_queries
 from scholarshipx.status import normalize_name, normalize_url, refresh_status, slugify
 from scholarshipx.store import load_scholarships, save_scholarships
 from scholarshipx.verify import has_external_apply_link, verify
@@ -84,9 +86,11 @@ def discover(
     sources = load_sources()
     existing = prune_internal_apply_links(load_scholarships())
     listing_urls = [site["url"] for site in sources.get("listing_sites", [])]
+    profile_queries = generate_profile_queries()
+    queries = list(dict.fromkeys(profile_queries + sources.get("search_queries", [])))
     search_urls: list[str] = []
     if use_search:
-        search_urls = search_listing_sites(sources.get("search_queries", []), sources)
+        search_urls = search_listing_sites(queries, sources)
 
     seen_urls: set[str] = set()
     ordered_urls: list[str] = []
@@ -148,11 +152,23 @@ def discover(
     merged = prune_internal_apply_links(merged)
     refresh_status(merged, today=today)
     save_scholarships(merged)
+    active = [item for item in merged if item.status != "EXPIRED"]
+    exports = build_profile_exports(active, today=today)
+    scored = exports["scored"]
     return {
         "pages_fetched": len(pages),
+        "profile_queries": len(profile_queries),
+        "queries_used": len(queries),
+        "search_results_considered": len(search_urls),
         "discovered": len(discovered),
         "verified": len(unique),
         "rejected": rejected,
         "added": added,
         "total": len(merged),
+        "likely_matches": sum(item.match_status == "likely_match" for item in scored),
+        "possible_matches": sum(item.match_status == "possible_match" for item in scored),
+        "candidate_rows": len(exports["candidate_rows"]),
+        "candidate_path": exports["candidate_path"],
+        "rejection_reasons": exports["rejection_reasons"],
+        "notion": exports["notion"],
     }

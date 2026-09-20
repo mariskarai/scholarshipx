@@ -35,13 +35,27 @@ def main(argv: list[str] | None = None) -> int:
         report = discover(max_new=args.max_new, use_search=not args.no_search)
         rendered = render()
         print(
-            "Discovery complete: "
-            f"{report['pages_fetched']} pages, "
+            "Scholarshipx discovery complete\n"
+            f"Profile queries: {report['profile_queries']}; "
+            f"queries used: {report['queries_used']}; "
+            f"search results considered: {report['search_results_considered']}\n"
+            f"Pages fetched: {report['pages_fetched']}; "
+            f"candidates extracted: {report['discovered']}; "
             f"{report['verified']} verified, "
             f"{report['rejected']} rejected, "
             f"{report['added']} added, "
-            f"{report['total']} total. "
-            "README updated."
+            f"{report['total']} total.\n"
+            f"Likely matches: {report['likely_matches']}; "
+            f"possible matches: {report['possible_matches']}\n"
+            f"Wrote: {report['candidate_path']}\n"
+            "Top rejection reasons: "
+            + ", ".join(
+                f"{reason}={count}"
+                for reason, count in sorted(
+                    report["rejection_reasons"].items(),
+                    key=lambda item: (-item[1], item[0]),
+                )[:5]
+            )
         )
         print(format_notion_cli_summary(rendered["notion_path"], rendered["notion_summary"]))
         return 0
@@ -69,7 +83,8 @@ def main(argv: list[str] | None = None) -> int:
         report = render()
         print(
             f"Rendered {report['active']} scholarships and {report['conferences']} conferences to README.md "
-            f"({report['archived']} + {report['archived_conferences']} archived)."
+            f"({report['archived']} + {report['archived_conferences']} archived); "
+            f"{report['candidate']} candidate rows written to {report['candidate_path']}."
         )
         print(format_notion_cli_summary(report["notion_path"], report["notion_summary"]))
         return 0
