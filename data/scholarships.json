@@ -688,5 +688,93 @@
     "source": "financialaid.ku.edu",
     "expected_open": null,
     "listing_url": ""
+  },
+  {
+    "id": "greater-kansas-city-community-foundation-scholarships",
+    "name": "Greater Kansas City Community Foundation Scholarships",
+    "organization": "Greater Kansas City Community Foundation",
+    "official_url": "https://gkccf.academicworks.com/",
+    "amount": "Varies",
+    "amount_value": null,
+    "deadline": null,
+    "deadline_display": "Check site",
+    "section": "Leadership & Community",
+    "status": "OPEN",
+    "tags": [
+      "Undergrad",
+      "Kansas"
+    ],
+    "eligibility": [
+      "Students in and around Kansas City"
+    ],
+    "major_requirements": "None stated",
+    "academic_level": "Undergraduate",
+    "min_gpa": "None stated",
+    "citizenship": "None stated",
+    "essay_required": "Unknown",
+    "other_requirements": [],
+    "notes": "Apply on the GKCCF AcademicWorks portal. The public landing page is growyourgiving.org. Complete the general application, then apply to each matching opportunity. Most 2026 awards have ended; the 2027/2028 cycle reopens in December.",
+    "date_found": "2026-09-19",
+    "source": "growyourgiving.org",
+    "expected_open": null,
+    "listing_url": "https://www.growyourgiving.org/resources/scholarships/"
+  },
+  {
+    "id": "c-and-c-group-scholarship",
+    "name": "C&C Group Scholarship",
+    "organization": "Greater Kansas City Community Foundation",
+    "official_url": "https://gkccf.academicworks.com/opportunities/8472",
+    "amount": "Varies",
+    "amount_value": null,
+    "deadline": "2026-09-20",
+    "deadline_display": "Sep 20, 2026",
+    "section": "Leadership & Community",
+    "status": "CLOSING_SOON",
+    "tags": [
+      "Undergrad",
+      "Kansas"
+    ],
+    "eligibility": [],
+    "major_requirements": "None stated",
+    "academic_level": "Undergraduate",
+    "min_gpa": "None stated",
+    "citizenship": "None stated",
+    "essay_required": "Unknown",
+    "other_requirements": [],
+    "notes": "Listed on the Greater Kansas City Community Foundation AcademicWorks portal. Confirm eligibility on the opportunity page.",
+    "date_found": "2026-09-19",
+    "source": "gkccf.academicworks.com",
+    "expected_open": null,
+    "listing_url": "https://gkccf.academicworks.com/"
+  },
+  {
+    "id": "hillcrest-transitional-housing-youth-scholarship-fund",
+    "name": "Hillcrest Transitional Housing Youth Scholarship Fund",
+    "organization": "Greater Kansas City Community Foundation",
+    "official_url": "https://gkccf.academicworks.com/opportunities/8226",
+    "amount": "Varies",
+    "amount_value": null,
+    "deadline": "2026-10-01",
+    "deadline_display": "Oct 1, 2026",
+    "section": "Leadership & Community",
+    "status": "CLOSING_SOON",
+    "tags": [
+      "Undergrad",
+      "Kansas"
+    ],
+    "eligibility": [
+      "Current Hillcrest Transitional Housing youth, per the fund description"
+    ],
+    "major_requirements": "None stated",
+    "academic_level": "Undergraduate",
+    "min_gpa": "None stated",
+    "citizenship": "None stated",
+    "essay_required": "Unknown",
+    "other_requirements": [],
+    "notes": "Listed on the Greater Kansas City Community Foundation AcademicWorks portal. Confirm eligibility on the opportunity page.",
+    "date_found": "2026-09-19",
+    "source": "gkccf.academicworks.com",
+    "expected_open": null,
+    "listing_url": "https://gkccf.academicworks.com/"
   }
 ]

@@ -31,6 +31,9 @@ listing_sites:
 
   # Local community / credit-union awards — county or membership gated
   - name: Greater Kansas City Community Foundation Scholarships
+    url: https://www.growyourgiving.org/resources/scholarships/
+    section: Leadership & Community
+  - name: GKCCF AcademicWorks Scholarship Portal
     url: https://gkccf.academicworks.com/
     section: Leadership & Community
   - name: Topeka Community Foundation College Scholarships
@@ -104,6 +107,7 @@ search_queries:
   - site:eecs.ku.edu scholarship
   - site:kansasregents.gov scholarship undergraduate first generation
   - site:gkccf.academicworks.com scholarship Kansas
+  - site:growyourgiving.org scholarship Kansas City
   - site:topekacommunityfoundation.org college scholarship
   - site:swe.org scholarship Kansas City computing
   - site:shpe.org ScholarSHPE undergraduate
@@ -126,6 +130,7 @@ prefer_domains:
   - ukash.ku.edu
   - kansasregents.gov
   - gkccf.academicworks.com
+  - growyourgiving.org
   - topekacommunityfoundation.org
   - hcu.coop
   - swe.org

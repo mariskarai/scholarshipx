@@ -2,8 +2,8 @@ name: Discover scholarships
 
 on:
   schedule:
-    # Monday 14:00 UTC (9:00 AM Central during daylight time)
-    - cron: "0 14 * * 1"
+    # Every 3 days at 14:00 UTC (9:00 AM Central during daylight time)
+    - cron: "0 14 */3 * *"
   workflow_dispatch:
 
 permissions:
