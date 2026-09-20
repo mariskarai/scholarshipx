@@ -29,6 +29,10 @@ BLOCKED_APPLY_DOMAINS = (
     "cappex.com",
     "careeronestop.org",
 )
+KU_DOMAINS = (
+    "ku.edu",
+    "ku.academicworks.com",
+)
 
 SEARCH_FIELDS = (
     "id",
@@ -236,6 +240,11 @@ def _is_safe_http_url(url: str) -> bool:
 def _is_blocked_apply_url(url: str) -> bool:
     host = (urlparse(url).hostname or "").lower().removeprefix("www.")
     return any(host == domain or host.endswith("." + domain) for domain in BLOCKED_APPLY_DOMAINS)
+
+
+def is_ku_url(url: str) -> bool:
+    host = (urlparse(url).hostname or "").lower().removeprefix("www.")
+    return any(host == domain or host.endswith("." + domain) for domain in KU_DOMAINS)
 
 
 def _record(item: Scholarship | dict[str, Any]) -> dict[str, Any]:
@@ -525,6 +534,8 @@ def _skip_reason(record: dict[str, Any], today: date | None) -> str | None:
         return "below_minimum_amount"
     if not is_valid_notion_candidate(record, today=today):
         return "missing_website"
+    if is_ku_url(website):
+        return "ku_internal"
     if _is_aggregator(record, website):
         return "aggregator"
     if not is_specific_scholarship_url(website):
