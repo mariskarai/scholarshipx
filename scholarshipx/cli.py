@@ -63,7 +63,8 @@ def main(argv: list[str] | None = None) -> int:
         report = render()
         print(
             f"Rendered {report['active']} scholarships and {report['conferences']} conferences to README.md "
-            f"({report['archived']} + {report['archived_conferences']} archived)."
+            f"({report['archived']} + {report['archived_conferences']} archived; "
+            f"{report['notion']} Notion rows)."
         )
         return 0
 

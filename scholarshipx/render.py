@@ -14,10 +14,11 @@ from scholarshipx.models import (
     Conference,
     Scholarship,
 )
-from scholarshipx.paths import ARCHIVE_PATH, README_PATH
+from scholarshipx.paths import ARCHIVE_PATH, NOTION_SCHOLARSHIPS_PATH, README_PATH
+from scholarshipx.notion import build_notion_scholarships
 from scholarshipx.sanitize import html_text, is_safe_http_url
 from scholarshipx.status import refresh_conference_status, refresh_status
-from scholarshipx.store import load_conferences, load_scholarships, save_conferences, save_scholarships
+from scholarshipx.store import load_conferences, load_scholarships, save_conferences, save_notion_scholarships, save_scholarships
 from scholarshipx.verify import has_external_apply_link
 
 STATUS_LABELS = {
@@ -227,11 +228,15 @@ def render(today: date | None = None) -> dict:
 
     README_PATH.write_text(render_readme(active, live_conferences), encoding="utf-8")
     ARCHIVE_PATH.write_text(render_archive(expired, past_conferences), encoding="utf-8")
+    notion_rows = build_notion_scholarships(active, today=today)
+    save_notion_scholarships(notion_rows)
     return {
         "active": len(active),
         "archived": len(expired),
         "conferences": len(live_conferences),
         "archived_conferences": len(past_conferences),
+        "notion": len(notion_rows),
         "readme": str(README_PATH),
         "archive": str(ARCHIVE_PATH),
+        "notion_path": str(NOTION_SCHOLARSHIPS_PATH),
     }

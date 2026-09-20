@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 
 from scholarshipx.models import Conference, Scholarship
-from scholarshipx.paths import CONFERENCES_PATH, DATA_DIR, SCHOLARSHIPS_PATH
+from scholarshipx.paths import CONFERENCES_PATH, DATA_DIR, NOTION_SCHOLARSHIPS_PATH, SCHOLARSHIPS_PATH
 
 
 def load_scholarships(path: Path | None = None) -> list[Scholarship]:
@@ -44,4 +44,11 @@ def save_conferences(conferences: list[Conference], path: Path | None = None) ->
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     payload = [item.to_dict() for item in conferences]
     target.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    return target
+
+
+def save_notion_scholarships(rows: list[dict], path: Path | None = None) -> Path:
+    target = path or NOTION_SCHOLARSHIPS_PATH
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
+    target.write_text(json.dumps(rows, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     return target
