@@ -734,7 +734,9 @@
       "Undergrad",
       "Kansas"
     ],
-    "eligibility": [],
+    "eligibility": [
+      "Children of full-time C&C employees; parent or legal guardian employment relationship"
+    ],
     "major_requirements": "None stated",
     "academic_level": "Undergraduate",
     "min_gpa": "None stated",

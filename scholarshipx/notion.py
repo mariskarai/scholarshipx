@@ -8,6 +8,7 @@ from typing import Any
 from urllib.parse import urlparse
 
 from scholarshipx.models import STATUS_EXPIRED, Scholarship
+from scholarshipx.status import parse_deadline
 
 ISO_DATE = re.compile(r"^20\d{2}-\d{2}-\d{2}$")
 MINIMUM_AMOUNT = 500
@@ -30,6 +31,7 @@ BLOCKED_APPLY_DOMAINS = (
 )
 
 SEARCH_FIELDS = (
+    "id",
     "name",
     "section",
     "tags",
@@ -39,16 +41,21 @@ SEARCH_FIELDS = (
     "notes",
     "other_requirements",
     "organization",
+    "source",
 )
 
-LANE_PATTERNS = (
+CORE_PROFILE_LANES = (
     re.compile(r"computer science"),
     re.compile(r"\bcomputing\b"),
     re.compile(r"\bsoftware\b"),
-    re.compile(r"technolog"),
+    re.compile(r"\btechnolog(?:y|ies)\b"),
     re.compile(r"\btech\b"),
-    re.compile(r"\bstem\b"),
-    re.compile(r"engineer"),
+    re.compile(r"\bfintech\b"),
+    re.compile(r"financial technology"),
+    re.compile(r"\bbusiness\b"),
+)
+
+PRIORITY_PROFILE_LANES = (
     re.compile(r"women in (stem|tech|computing|engineering|science)"),
     re.compile(r"women in stem"),
     re.compile(r"women in tech"),
@@ -58,11 +65,6 @@ LANE_PATTERNS = (
     re.compile(r"\bkansas\b"),
     re.compile(r"\bku\b"),
     re.compile(r"university of kansas"),
-    re.compile(r"\bfintech\b"),
-    re.compile(r"financial technology"),
-    re.compile(r"\bbusiness\b"),
-    re.compile(r"leadership"),
-    re.compile(r"community"),
 )
 
 KEEP_GEO = re.compile(
@@ -199,6 +201,23 @@ AGGREGATOR_HINTS = (
     "one click apply",
 )
 
+EMPLOYEE_CHILD_PATTERNS = (
+    re.compile(r"child of employee"),
+    re.compile(r"children of employee"),
+    re.compile(r"child of full[- ]time employee"),
+    re.compile(r"children of full[- ]time employees"),
+    re.compile(r"child(?:ren)? of (?:a |an )?(?:full[- ]time )?(?:[a-z0-9&.'/-]+\s+){0,5}employees?"),
+    re.compile(r"parent employed"),
+    re.compile(r"parent/?\s*legal guardian"),
+    re.compile(r"legal guardian(?:\s+\w+){0,6}\s+employ"),
+    re.compile(r"employee parent"),
+    re.compile(r"dependent child of employee"),
+    re.compile(r"c\s*&\s*c(?:\s+group)?\s+employee"),
+    re.compile(r"c\s*&\s*c\s+group"),
+    re.compile(r"c-and-c-group"),
+    re.compile(r"c and c group"),
+)
+
 
 def _is_safe_http_url(url: str) -> bool:
     parsed = urlparse(url or "")
@@ -298,17 +317,47 @@ def _website(record: dict[str, Any]) -> str | None:
     return (specific or urls)[0]
 
 
-def _deadline(raw: Any) -> str | None:
-    if not isinstance(raw, str):
-        return None
-    value = raw.strip()
-    if not ISO_DATE.fullmatch(value):
-        return None
-    try:
-        date.fromisoformat(value)
-    except ValueError:
-        return None
-    return value
+def _deadline(record_or_raw: Any, today: date | None = None) -> str | None:
+    if isinstance(record_or_raw, dict):
+        record = record_or_raw
+        candidates = [
+            record.get("deadline"),
+            record.get("deadline_display"),
+            record.get("notes"),
+        ]
+    else:
+        candidates = [record_or_raw]
+
+    for raw in candidates:
+        if not isinstance(raw, str):
+            continue
+        value = raw.strip()
+        if ISO_DATE.fullmatch(value):
+            try:
+                date.fromisoformat(value)
+            except ValueError:
+                continue
+            return value
+
+        parsed = parse_deadline(value, today=today)
+        if parsed:
+            return parsed.isoformat()
+
+        numeric = re.search(
+            r"(?:deadline|due)\D{0,24}(0?[1-9]|1[0-2])[-/](0?[1-9]|[12]\d|3[01])[-/](20\d{2})",
+            value,
+            flags=re.I,
+        )
+        if numeric:
+            try:
+                return date(
+                    int(numeric.group(3)),
+                    int(numeric.group(1)),
+                    int(numeric.group(2)),
+                ).isoformat()
+            except ValueError:
+                continue
+    return None
 
 
 def _is_expired(record: dict[str, Any], deadline: str, today: date | None = None) -> bool:
@@ -394,15 +443,41 @@ def _no_essay(record: dict[str, Any], text: str) -> bool:
 
 
 def has_relevant_lane(item: Scholarship | dict[str, Any]) -> bool:
+    record = _record(item)
     text = searchable_text(item)
     if not text.strip():
         return False
-    return any(pattern.search(text) for pattern in LANE_PATTERNS)
+    if any(pattern.search(text) for pattern in CORE_PROFILE_LANES):
+        return True
+    if any(pattern.search(text) for pattern in PRIORITY_PROFILE_LANES):
+        return True
+    engineering_text = " ".join(
+        _as_text(record.get(field))
+        for field in (
+            "name",
+            "tags",
+            "eligibility",
+            "major_requirements",
+            "notes",
+            "other_requirements",
+        )
+    ).lower()
+    if re.search(r"\bengineer(?:ing|ed)?\b", engineering_text):
+        return True
+    return False
+
+
+def has_employee_child_requirement(item: Scholarship | dict[str, Any]) -> bool:
+    record = _record(item)
+    text = searchable_text(record)
+    return any(pattern.search(text) for pattern in EMPLOYEE_CHILD_PATTERNS)
 
 
 def has_disqualifying_requirement(item: Scholarship | dict[str, Any]) -> bool:
     record = _record(item)
     text = searchable_text(record)
+    if has_employee_child_requirement(record):
+        return True
     if any(pattern.search(text) for pattern in DISQUALIFY_PATTERNS):
         return True
     if _exclusive_field_mismatch(record):
@@ -425,7 +500,7 @@ def is_valid_notion_candidate(item: Scholarship | dict[str, Any], today: date | 
     record = _record(item)
     name = _name(record.get("name"))
     website = _website(record)
-    deadline = _deadline(record.get("deadline"))
+    deadline = _deadline(record, today=today)
     if not name or not website or not deadline:
         return False
     if _is_expired(record, deadline, today=today):
@@ -441,7 +516,7 @@ def _skip_reason(record: dict[str, Any], today: date | None) -> str | None:
     website = _website(record)
     if not website:
         return "missing_website"
-    deadline = _deadline(record.get("deadline"))
+    deadline = _deadline(record, today=today)
     if not deadline:
         return "missing_deadline"
     if _is_expired(record, deadline, today=today):
@@ -464,7 +539,7 @@ def _skip_reason(record: dict[str, Any], today: date | None) -> str | None:
 def _row(record: dict[str, Any]) -> dict[str, Any]:
     name = _name(record.get("name"))
     website = _website(record)
-    deadline = _deadline(record.get("deadline"))
+    deadline = _deadline(record)
     assert name and website and deadline
     return {
         "Name": name,
@@ -530,3 +605,17 @@ def format_notion_cli_summary(path: str, export: dict[str, Any]) -> str:
         for reason, count in reasons:
             lines.append(f"- {reason}: {count}")
     return "\n".join(lines)
+
+
+def run_notion_export(today: date | None = None) -> dict[str, Any]:
+    from scholarshipx.models import STATUS_EXPIRED
+    from scholarshipx.paths import NOTION_SCHOLARSHIPS_PATH
+    from scholarshipx.status import refresh_status
+    from scholarshipx.store import load_scholarships, save_notion_scholarships
+
+    items = refresh_status(load_scholarships(), today=today)
+    active = [item for item in items if item.status != STATUS_EXPIRED]
+    export = export_notion_scholarships(active, today=today)
+    save_notion_scholarships(export["rows"])
+    export["path"] = str(NOTION_SCHOLARSHIPS_PATH)
+    return export

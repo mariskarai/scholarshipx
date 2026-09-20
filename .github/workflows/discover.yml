@@ -25,12 +25,12 @@ jobs:
           cache: pip
 
       - name: Install dependencies
-        run: pip install httpx beautifulsoup4 lxml pyyaml python-dateutil
+        run: pip install httpx beautifulsoup4 lxml pyyaml python-dateutil ddgs
 
       - name: Discover and render listings
         env:
           PYTHONUNBUFFERED: "1"
-        run: python -m scholarshipx discover --no-search
+        run: python -m scholarshipx discover
 
       - name: Commit listing updates
         run: |

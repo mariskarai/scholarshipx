@@ -100,6 +100,9 @@ listing_sites:
     url: https://jlvcollegecounseling.com/scholarships/september-scholarships/
 
 search_queries:
+  - site:ku.academicworks.com/opportunities computer science undergraduate scholarship
+  - site:ku.academicworks.com/opportunities software technology business scholarship
+  - site:ku.academicworks.com/opportunities women STEM scholarship undergraduate
   - site:ku.academicworks.com undergraduate scholarship computer science
   - site:ku.academicworks.com engineering scholarship
   - site:ku.academicworks.com first generation scholarship
@@ -121,6 +124,8 @@ search_queries:
   - site:careeronestop.org first generation scholarship
   - site:careeronestop.org Kansas scholarship undergraduate
   - site:careeronestop.org immigrant student scholarship
+  - "undergraduate computer science scholarship women technology $500"
+  - "undergraduate software engineering scholarship business fintech $500"
 
 prefer_domains:
   - ku.academicworks.com

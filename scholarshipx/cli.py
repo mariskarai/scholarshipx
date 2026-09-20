@@ -2,9 +2,7 @@ from __future__ import annotations
 
 import argparse
 
-from scholarshipx.discover import discover
-from scholarshipx.notion import format_notion_cli_summary
-from scholarshipx.render import render
+from scholarshipx.notion import format_notion_cli_summary, run_notion_export
 from scholarshipx.status import refresh_conference_status, refresh_status
 from scholarshipx.store import load_conferences, load_scholarships, save_conferences, save_scholarships
 
@@ -26,10 +24,14 @@ def main(argv: list[str] | None = None) -> int:
 
     sub.add_parser("status", help="Recompute OPEN / CLOSING SOON / OPENS SOON from deadlines")
     sub.add_parser("render", help="Rebuild README.md and ARCHIVE.md from JSON")
+    sub.add_parser("notion-export", help="Write data/notion_scholarships.json from filtered scholarships")
 
     args = parser.parse_args(argv)
 
     if args.command == "discover":
+        from scholarshipx.discover import discover
+        from scholarshipx.render import render
+
         report = discover(max_new=args.max_new, use_search=not args.no_search)
         rendered = render()
         print(
@@ -62,12 +64,19 @@ def main(argv: list[str] | None = None) -> int:
         return 0
 
     if args.command == "render":
+        from scholarshipx.render import render
+
         report = render()
         print(
             f"Rendered {report['active']} scholarships and {report['conferences']} conferences to README.md "
             f"({report['archived']} + {report['archived_conferences']} archived)."
         )
         print(format_notion_cli_summary(report["notion_path"], report["notion_summary"]))
+        return 0
+
+    if args.command == "notion-export":
+        export = run_notion_export()
+        print(format_notion_cli_summary(export["path"], export))
         return 0
 
     parser.error("unknown command")
