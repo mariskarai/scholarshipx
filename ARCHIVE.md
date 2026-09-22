@@ -8,7 +8,7 @@ Scholarships whose deadlines have passed, and conferences whose dates have passe
 <table>
 <thead><tr><th align="left">Award</th><th align="right">Amount</th><th align="left">Deadline</th></tr></thead>
 <tbody>
-<tr><td colspan="3"><sub>None listed yet.</sub></td></tr>
+<tr><td><a href="https://gkccf.academicworks.com/opportunities/8472">C&amp;C Group Scholarship</a><br><sub>Greater Kansas City Community Foundation · Undergrad · Kansas</sub></td><td align="right">Varies</td><td>Sep 20, 2026<br><sub>Open</sub></td></tr>
 </tbody>
 </table>
 

@@ -36,7 +36,7 @@
     "when": "Dec 6–12, 2026",
     "location": "Atlanta / Sydney / Paris",
     "section": "Computing & Open Source",
-    "status": "OPEN",
+    "status": "CLOSING_SOON",
     "tags": [
       "Undergrad",
       "AI",
@@ -62,7 +62,7 @@
     "when": "Feb 16–23, 2027",
     "location": "Montreal, Canada",
     "section": "Computing & Open Source",
-    "status": "OPEN",
+    "status": "CLOSING_SOON",
     "tags": [
       "Undergrad",
       "AI",
@@ -856,7 +856,7 @@
     "when": "Sep 17–20, 2026",
     "location": "Houston, TX",
     "section": "First-generation & Immigrant",
-    "status": "GRANT_CLOSED",
+    "status": "OPENS_SOON",
     "tags": [
       "Pre-health",
       "First-gen"
