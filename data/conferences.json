@@ -756,7 +756,7 @@
     "when": "Mar 21–25, 2027",
     "location": "New Orleans, LA",
     "section": "Sciences & Research",
-    "status": "OPEN",
+    "status": "CLOSING_SOON",
     "tags": [
       "Undergrad",
       "Chemistry"
@@ -907,7 +907,7 @@
     "when": "Oct 16–18, 2026",
     "location": "New York, NY",
     "section": "Leadership & Community",
-    "status": "CLOSING_SOON",
+    "status": "GRANT_CLOSED",
     "tags": [
       "Undergrad",
       "Leadership"
