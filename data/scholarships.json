@@ -832,5 +832,32 @@
     "source": "financialaid.ku.edu",
     "expected_open": null,
     "listing_url": ""
+  },
+  {
+    "id": "school-of-journalism-and-mass-communications-incoming-student-scholarship-application",
+    "name": "School of Journalism and Mass Communications Incoming Student Scholarship Application",
+    "organization": "ku.academicworks.com",
+    "official_url": "https://ku.academicworks.com/opportunities/49068",
+    "amount": "Unknown",
+    "amount_value": null,
+    "deadline": null,
+    "deadline_display": "Check site",
+    "section": "General Undergraduate",
+    "status": "OPEN",
+    "tags": [
+      "Undergrad"
+    ],
+    "eligibility": [],
+    "major_requirements": "None stated",
+    "academic_level": "Undergraduate",
+    "min_gpa": "None stated",
+    "citizenship": "None stated",
+    "essay_required": "Unknown",
+    "other_requirements": [],
+    "notes": "Varies School of Journalism and Mass Communications Incoming Student Scholarship Application One-year scholarships for incoming freshmen and transfer students to the... Deadline 12/15/2026",
+    "date_found": "2026-10-01",
+    "source": "ku.academicworks.com",
+    "expected_open": null,
+    "listing_url": ""
   }
 ]

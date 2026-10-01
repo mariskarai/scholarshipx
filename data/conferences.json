@@ -138,7 +138,7 @@
     "when": "Rolling windows by conference date",
     "location": "Any CS research conference",
     "section": "Computing & Open Source",
-    "status": "OPEN",
+    "status": "CLOSING_SOON",
     "tags": [
       "Undergrad",
       "Women in STEM"
@@ -215,7 +215,7 @@
     "when": "Mar 17–19, 2027",
     "location": "Denver, CO",
     "section": "Women in STEM / Tech",
-    "status": "CLOSING_SOON",
+    "status": "GRANT_CLOSED",
     "tags": [
       "Undergrad",
       "Cybersecurity",

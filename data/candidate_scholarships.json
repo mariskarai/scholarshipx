@@ -212,5 +212,32 @@
     "amount_verified": false,
     "eligibility_verified": false,
     "rejection_reason": null
+  },
+  {
+    "name": "School of Journalism and Mass Communications Incoming Student Scholarship Application",
+    "amount": null,
+    "amount_display": "Unknown",
+    "website": "https://ku.academicworks.com/opportunities/49068",
+    "deadline": "2026-12-15",
+    "source_url": "https://ku.academicworks.com/opportunities/49068",
+    "source_name": "ku.academicworks.com",
+    "candidate_type": "individual_scholarship",
+    "match_status": "possible_match",
+    "fit_score": 0.47,
+    "match_lanes": [
+      "Kansas / KU / Kansas City",
+      "undergraduate"
+    ],
+    "evidence_snippet": "Varies School of Journalism and Mass Communications Incoming Student Scholarship Application One-year scholarships for incoming freshmen and transfer students to the... Deadline 12/15/2026",
+    "eligibility_summary": "",
+    "uncertainties": [
+      "amount should be confirmed on the official page",
+      "eligibility details are sparse"
+    ],
+    "official_page_verified": true,
+    "deadline_verified": true,
+    "amount_verified": false,
+    "eligibility_verified": false,
+    "rejection_reason": null
   }
 ]
