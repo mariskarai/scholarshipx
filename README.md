@@ -100,7 +100,6 @@ Scholarship **Apply** links go to the sponsor, not Bold.org-style boards. Confer
 <table>
 <thead><tr><th align="left">Award</th><th align="right">Amount</th><th align="left">Deadline</th></tr></thead>
 <tbody>
-<tr><td><a href="https://gkccf.academicworks.com/opportunities/8226">Hillcrest Transitional Housing Youth Scholarship Fund</a><br><sub>Greater Kansas City Community Foundation · Undergrad · Kansas</sub></td><td align="right">Varies</td><td>Oct 1, 2026<br><sub>Closes soon</sub></td></tr>
 <tr><td><a href="https://pacfwv.com">H.G. Hardbarger Science - Mathematics Award</a><br><sub>Parkersburg Area Community Foundation · Undergrad · STEM</sub></td><td align="right">Unknown</td><td>Mar 1, 2027<br><sub>Open</sub></td></tr>
 <tr><td><a href="https://gkccf.academicworks.com/">Greater Kansas City Community Foundation Scholarships</a><br><sub>Greater Kansas City Community Foundation · Undergrad · Kansas</sub></td><td align="right">Varies</td><td>Check site<br><sub>Open</sub></td></tr>
 <tr><td><a href="https://ku.academicworks.com/opportunities/49933">Hixson Opportunity Award</a><br><sub>ku.academicworks.com · Undergrad · Kansas</sub></td><td align="right">$6,000</td><td>Check site<br><sub>Open</sub></td></tr>
