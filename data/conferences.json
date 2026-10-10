@@ -267,7 +267,7 @@
     "when": "Oct 5–7, 2026",
     "location": "New York, NY + virtual",
     "section": "Women in STEM / Tech",
-    "status": "OPEN",
+    "status": "EXPIRED",
     "tags": [
       "Undergrad",
       "LGBTQ+",
@@ -831,7 +831,7 @@
     "when": "NCUR Apr 12–14, 2027; also funds SACNAS / ABRCMS / AISES",
     "location": "Grand Rapids, MI (NCUR)",
     "section": "Sciences & Research",
-    "status": "CLOSING_SOON",
+    "status": "GRANT_CLOSED",
     "tags": [
       "Undergrad",
       "Research"
@@ -881,7 +881,7 @@
     "when": "Oct 6–9, 2026",
     "location": "Orlando, FL",
     "section": "Business",
-    "status": "GRANT_CLOSED",
+    "status": "OPENS_SOON",
     "tags": [
       "Undergrad",
       "Business",

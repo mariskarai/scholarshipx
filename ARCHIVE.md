@@ -19,6 +19,6 @@ Scholarships whose deadlines have passed, and conferences whose dates have passe
 <table>
 <thead><tr><th align="left">Conference</th><th align="left">Grant</th><th align="left">When</th></tr></thead>
 <tbody>
-<tr><td colspan="3"><sub>None listed yet.</sub></td></tr>
+<tr><td><a href="https://lwtsquad.com/lwt-summit-2026/">Lesbians Who Tech + Allies Summit</a><br><sub>LWT Squad · New York, NY + virtual</sub></td><td><a href="https://lwtsquad.com/lwt-summit-2026/start-scholarship-application/">Diversity scholarship</a><br><sub>Mostly discounted tickets; a few fully covered for highest need · Rolling</sub></td><td>Oct 5–7, 2026<br><sub>Open</sub></td></tr>
 </tbody>
 </table>

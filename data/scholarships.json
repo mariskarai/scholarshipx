@@ -859,5 +859,33 @@
     "source": "ku.academicworks.com",
     "expected_open": null,
     "listing_url": ""
+  },
+  {
+    "id": "department-of-sociology-undergraduate-scholarship-application",
+    "name": "Department of Sociology Undergraduate Scholarship Application",
+    "organization": "ku.academicworks.com",
+    "official_url": "https://ku.academicworks.com/opportunities/44226",
+    "amount": "Unknown",
+    "amount_value": null,
+    "deadline": null,
+    "deadline_display": "Check site",
+    "section": "General Undergraduate",
+    "status": "OPEN",
+    "tags": [
+      "Undergrad",
+      "Undergraduate"
+    ],
+    "eligibility": [],
+    "major_requirements": "None stated",
+    "academic_level": "Undergraduate",
+    "min_gpa": "None stated",
+    "citizenship": "None stated",
+    "essay_required": "Unknown",
+    "other_requirements": [],
+    "notes": "Varies Department of Sociology Undergraduate Scholarship Application The KU Department of Sociology is accepting applications for its annual...",
+    "date_found": "2026-10-10",
+    "source": "ku.academicworks.com",
+    "expected_open": null,
+    "listing_url": ""
   }
 ]

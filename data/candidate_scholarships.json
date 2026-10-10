@@ -239,5 +239,33 @@
     "amount_verified": false,
     "eligibility_verified": false,
     "rejection_reason": null
+  },
+  {
+    "name": "Department of Sociology Undergraduate Scholarship Application",
+    "amount": null,
+    "amount_display": "Unknown",
+    "website": "https://ku.academicworks.com/opportunities/44226",
+    "deadline": null,
+    "source_url": "https://ku.academicworks.com/opportunities/44226",
+    "source_name": "ku.academicworks.com",
+    "candidate_type": "individual_scholarship",
+    "match_status": "possible_match",
+    "fit_score": 0.47,
+    "match_lanes": [
+      "Kansas / KU / Kansas City",
+      "undergraduate"
+    ],
+    "evidence_snippet": "Varies Department of Sociology Undergraduate Scholarship Application The KU Department of Sociology is accepting applications for its annual...",
+    "eligibility_summary": "",
+    "uncertainties": [
+      "amount should be confirmed on the official page",
+      "deadline should be confirmed on the official page",
+      "eligibility details are sparse"
+    ],
+    "official_page_verified": true,
+    "deadline_verified": false,
+    "amount_verified": false,
+    "eligibility_verified": false,
+    "rejection_reason": null
   }
 ]

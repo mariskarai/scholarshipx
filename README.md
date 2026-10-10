@@ -113,6 +113,7 @@ Scholarship **Apply** links go to the sponsor, not Bold.org-style boards. Confer
 <table>
 <thead><tr><th align="left">Award</th><th align="right">Amount</th><th align="left">Deadline</th></tr></thead>
 <tbody>
+<tr><td><a href="https://ku.academicworks.com/opportunities/44226">Department of Sociology Undergraduate Scholarship Application</a><br><sub>ku.academicworks.com · Undergrad · Undergraduate</sub></td><td align="right">Unknown</td><td>Check site<br><sub>Open</sub></td></tr>
 <tr><td><a href="https://ku.academicworks.com/opportunities/49837">Emergency Grant Application</a><br><sub>ku.academicworks.com · Undergrad</sub></td><td align="right">$500</td><td>Check site<br><sub>Open</sub></td></tr>
 <tr><td><a href="https://ku.academicworks.com/opportunities/49931">EOF Child Care Grant 2026-2027</a><br><sub>ku.academicworks.com · Undergrad</sub></td><td align="right">Unknown</td><td>Check site<br><sub>Open</sub></td></tr>
 <tr><td><a href="https://financialaid.ku.edu/">Financial Aid &amp; Scholarships</a><br><sub>financialaid.ku.edu · Undergrad</sub></td><td align="right">Unknown</td><td>Check site<br><sub>Open</sub></td></tr>
@@ -180,13 +181,13 @@ Starting list from [BadgeUp](https://github.com/Jose-Gael-Cruz-Lopez/BadgeUp), t
 <table>
 <thead><tr><th align="left">Conference</th><th align="left">Grant</th><th align="left">When</th></tr></thead>
 <tbody>
-<tr><td><a href="https://www.cur.org/events-services/ncur/">CUR Undergraduate Conference Awards</a><br><sub>Council on Undergraduate Research · Grand Rapids, MI (NCUR)</sub></td><td><a href="https://www.cur.org/membership-community/honors-awards/student-awards/">Travel award</a><br><sub>Biology up to $250; Psychology up to $450; Social Sciences up to $400 · Oct 9, 2026</sub></td><td>NCUR Apr 12–14, 2027; also funds SACNAS / ABRCMS / AISES<br><sub>Closes soon</sub></td></tr>
 <tr><td><a href="https://www.acsgeoc.org/">ACS Geochemistry Division Student Travel Award</a><br><sub>ACS Division of Geochemistry · New Orleans, LA</sub></td><td><a href="https://www.acsgeoc.org/news/travel-award-fall-2021-applications-p7w8m-kzma7-jl9k2">Travel award</a><br><sub>Registration plus $200 stipend; must present · Oct 12, 2026</sub></td><td>Mar 21–25, 2027<br><sub>Closes soon</sub></td></tr>
 <tr><td><a href="https://www.acs.org/meetings.html">ACS WCC/Lilly Emerging Talent Award</a><br><sub>American Chemical Society · New Orleans, LA</sub></td><td><a href="https://www.acs.org/funding/awards/women-chemists-lilly-emerging-talent-award.html">Travel award</a><br><sub>Registration, travel, lodging. Some funds reserved for undergrads. · Dec 15, 2026</sub></td><td>Mar 21–25, 2027<br><sub>Open</sub></td></tr>
 <tr><td><a href="https://www.acs.org/meetings.html">ACS CWD Student Travel Award</a><br><sub>American Chemical Society · Varies</sub></td><td><a href="https://www.acs.org/funding/awards/cwd-student-travel-award.html">Travel award</a><br><sub>Up to $2,000 for lodging, transport, and meals · Jan 15, 2027</sub></td><td>ACS Spring / Fall meetings<br><sub>Open</sub></td></tr>
 <tr><td><a href="https://www.agu.org/annual-meeting">AGU Annual Meeting Student Travel Grant</a><br><sub>American Geophysical Union · San Francisco, CA</sub></td><td><a href="https://www.agu.org/honors/travel-grants">Travel grant</a><br><sub>About $1,000 virtual or in-person; abstract required · Aug 12, 2026</sub></td><td>Dec 7–11, 2026<br><sub>Grant closed</sub></td></tr>
 <tr><td><a href="https://abrcms.org/">ABRCMS Travel Award</a><br><sub>American Society for Microbiology · Seattle, WA</sub></td><td><a href="https://abrcms.org/present-at-abrcms/apply-for-a-travel-award/">Travel award</a><br><sub>Registration, shared housing, and/or travel. Abstract required. · Sep 11, 2026</sub></td><td>Nov 18–21, 2026<br><sub>Grant closed</sub></td></tr>
 <tr><td><a href="https://annual.ametsoc.org/2027/">AMS Annual Meeting Student Travel Grants</a><br><sub>American Meteorological Society · Denver, CO</sub></td><td><a href="https://annual.ametsoc.org/2027/attend/students/student-travel-grants/">Travel grant</a><br><sub>Hotel, meeting registration, travel stipend · Sep 18, 2026</sub></td><td>2027 AMS Annual Meeting<br><sub>Grant closed</sub></td></tr>
+<tr><td><a href="https://www.cur.org/events-services/ncur/">CUR Undergraduate Conference Awards</a><br><sub>Council on Undergraduate Research · Grand Rapids, MI (NCUR)</sub></td><td><a href="https://www.cur.org/membership-community/honors-awards/student-awards/">Travel award</a><br><sub>Biology up to $250; Psychology up to $450; Social Sciences up to $400 · Oct 9, 2026</sub></td><td>NCUR Apr 12–14, 2027; also funds SACNAS / ABRCMS / AISES<br><sub>Grant closed</sub></td></tr>
 </tbody>
 </table>
 
@@ -195,7 +196,7 @@ Starting list from [BadgeUp](https://github.com/Jose-Gael-Cruz-Lopez/BadgeUp), t
 <table>
 <thead><tr><th align="left">Conference</th><th align="left">Grant</th><th align="left">When</th></tr></thead>
 <tbody>
-<tr><td><a href="https://prospanica.org/conference2026/">Prospanica Conference Fellowship</a><br><sub>Prospanica · Orlando, FL</sub></td><td><a href="https://prospanica.org/conference2026/">Conference fellowship</a><br><sub>Attendance support when the fellowship is open · Closed this cycle</sub></td><td>Oct 6–9, 2026<br><sub>Grant closed</sub></td></tr>
+<tr><td><a href="https://prospanica.org/conference2026/">Prospanica Conference Fellowship</a><br><sub>Prospanica · Orlando, FL</sub></td><td><a href="https://prospanica.org/conference2026/">Conference fellowship</a><br><sub>Attendance support when the fellowship is open · Closed this cycle</sub></td><td>Oct 6–9, 2026<br><sub>Opens soon</sub></td></tr>
 </tbody>
 </table>
 
@@ -204,7 +205,6 @@ Starting list from [BadgeUp](https://github.com/Jose-Gael-Cruz-Lopez/BadgeUp), t
 <table>
 <thead><tr><th align="left">Conference</th><th align="left">Grant</th><th align="left">When</th></tr></thead>
 <tbody>
-<tr><td><a href="https://lwtsquad.com/lwt-summit-2026/">Lesbians Who Tech + Allies Summit</a><br><sub>LWT Squad · New York, NY + virtual</sub></td><td><a href="https://lwtsquad.com/lwt-summit-2026/start-scholarship-application/">Diversity scholarship</a><br><sub>Mostly discounted tickets; a few fully covered for highest need · Rolling</sub></td><td>Oct 5–7, 2026<br><sub>Open</sub></td></tr>
 <tr><td><a href="https://we26.swe.org/">SWE WE26 Registration Grants</a><br><sub>Society of Women Engineers · Boston, MA</sub></td><td><a href="https://we26.swe.org/resources/registration-grants-member-sponsored/">Registration grant</a><br><sub>One early-bird full conference registration; travel not included · May 15, 2026</sub></td><td>Nov 5–7, 2026<br><sub>Grant closed</sub></td></tr>
 <tr><td><a href="https://ghc.anitab.org/">Grace Hopper Celebration</a><br><sub>AnitaB.org · Anaheim, CA + virtual</sub></td><td><a href="https://ghc.anitab.org/awards-programs/scholarships">Diversity scholarship</a><br><sub>Registration / attendance support · Closed this cycle</sub></td><td>Oct 27–30, 2026<br><sub>Grant closed</sub></td></tr>
 <tr><td><a href="https://ghc.anitab.org/">AnitaB.org Kamala Scholars</a><br><sub>AnitaB.org · Anaheim, CA</sub></td><td><a href="https://ghc.anitab.org/kamala-scholars">Travel scholarship</a><br><sub>Airfare, lodging, transport, plus coaching; must attend GHC · Sep 8, 2026</sub></td><td>Oct 27–30, 2026<br><sub>Grant closed</sub></td></tr>
