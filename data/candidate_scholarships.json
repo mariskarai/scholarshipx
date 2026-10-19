@@ -213,6 +213,33 @@
     "rejection_reason": null
   },
   {
+    "name": "Courtwright Award for UGDL Research Excellence",
+    "amount": 500,
+    "amount_display": "$500",
+    "website": "https://ku.academicworks.com/opportunities/50289",
+    "deadline": null,
+    "source_url": "https://ku.academicworks.com/opportunities/50289",
+    "source_name": "ku.academicworks.com",
+    "candidate_type": "individual_scholarship",
+    "match_status": "possible_match",
+    "fit_score": 0.55,
+    "match_lanes": [
+      "Kansas / KU / Kansas City",
+      "undergraduate"
+    ],
+    "evidence_snippet": "$500 Courtwright Award for UGDL Research Excellence “This fund shall be used to provide supplementary financial support for...",
+    "eligibility_summary": "",
+    "uncertainties": [
+      "deadline should be confirmed on the official page",
+      "eligibility details are sparse"
+    ],
+    "official_page_verified": true,
+    "deadline_verified": false,
+    "amount_verified": true,
+    "eligibility_verified": false,
+    "rejection_reason": null
+  },
+  {
     "name": "TRIO Grant Application",
     "amount": null,
     "amount_display": "Unknown",

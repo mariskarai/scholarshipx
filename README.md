@@ -60,7 +60,7 @@ Scholarship **Apply** links go to the sponsor, not Bold.org-style boards. Confer
 <table>
 <thead><tr><th align="left">Award</th><th align="right">Amount</th><th align="left">Deadline</th></tr></thead>
 <tbody>
-<tr><td><a href="https://www.bocsci.com/chemistry-scholarship-program.html">BOC Sciences Chemistry Scholarship Program</a><br><sub>BOC Sciences · Undergrad · STEM</sub></td><td align="right">$1,000</td><td>Oct 31, 2026<br><sub>Open</sub></td></tr>
+<tr><td><a href="https://www.bocsci.com/chemistry-scholarship-program.html">BOC Sciences Chemistry Scholarship Program</a><br><sub>BOC Sciences · Undergrad · STEM</sub></td><td align="right">$1,000</td><td>Oct 31, 2026<br><sub>Closes soon</sub></td></tr>
 <tr><td><a href="http://golenengineservice.com">Golen Engine Scholarship</a><br><sub>Golen Engine Service · Undergrad · STEM</sub></td><td align="right">$500</td><td>November 30.<br><sub>Open</sub></td></tr>
 <tr><td><a href="http://www.ashrae.org">ASHARE Undergraduate Engineering Scholarships</a><br><sub>American Society of Heating, Refrigerating and Air-Conditioning · Undergrad · STEM · Undergraduate</sub></td><td align="right">$3,000 $10,000</td><td>December 1.<br><sub>Open</sub></td></tr>
 <tr><td><a href="http://www.ans.org">Decommissioning and Environmental Science Division Scholarship</a><br><sub>American Nuclear Society · Undergrad</sub></td><td align="right">$2,000 $3,000</td><td>February 1.<br><sub>Open</sub></td></tr>
@@ -115,6 +115,7 @@ Scholarship **Apply** links go to the sponsor, not Bold.org-style boards. Confer
 <tbody>
 <tr><td><a href="https://financialaid.ku.edu/additional-ku-scholarships">Additional KU Scholarships</a><br><sub>financialaid.ku.edu · Undergrad</sub></td><td align="right">Unknown</td><td>Check site<br><sub>Open</sub></td></tr>
 <tr><td><a href="https://ku.academicworks.com/opportunities/49133">Chad Libertus KPMG Scholarship</a><br><sub>ku.academicworks.com · Undergrad</sub></td><td align="right">$2,000</td><td>Check site<br><sub>Open</sub></td></tr>
+<tr><td><a href="https://ku.academicworks.com/opportunities/50289">Courtwright Award for UGDL Research Excellence</a><br><sub>ku.academicworks.com · Undergrad</sub></td><td align="right">$500</td><td>Check site<br><sub>Open</sub></td></tr>
 <tr><td><a href="https://ku.academicworks.com/opportunities/44226">Department of Sociology Undergraduate Scholarship Application</a><br><sub>ku.academicworks.com · Undergrad · Undergraduate</sub></td><td align="right">Unknown</td><td>Check site<br><sub>Open</sub></td></tr>
 <tr><td><a href="https://ku.academicworks.com/opportunities/49837">Emergency Grant Application</a><br><sub>ku.academicworks.com · Undergrad</sub></td><td align="right">$500</td><td>Check site<br><sub>Open</sub></td></tr>
 <tr><td><a href="https://ku.academicworks.com/opportunities/49931">EOF Child Care Grant 2026-2027</a><br><sub>ku.academicworks.com · Undergrad</sub></td><td align="right">Unknown</td><td>Check site<br><sub>Open</sub></td></tr>
@@ -176,7 +177,7 @@ Starting list from [BadgeUp](https://github.com/Jose-Gael-Cruz-Lopez/BadgeUp), t
 <table>
 <thead><tr><th align="left">Conference</th><th align="left">Grant</th><th align="left">When</th></tr></thead>
 <tbody>
-<tr><td><a href="https://conference.aises.org/">AISES National Conference Travel Scholarships</a><br><sub>American Indian Science and Engineering Society · Portland, OR</sub></td><td><a href="https://conference.aises.org/attendees/travel-scholarships">Travel scholarship</a><br><sub>Registration, economy airfare, shared lodging · Aug 15, 2026</sub></td><td>Oct 15–17, 2026<br><sub>Grant closed</sub></td></tr>
+<tr><td><a href="https://conference.aises.org/">AISES National Conference Travel Scholarships</a><br><sub>American Indian Science and Engineering Society · Portland, OR</sub></td><td><a href="https://conference.aises.org/attendees/travel-scholarships">Travel scholarship</a><br><sub>Registration, economy airfare, shared lodging · Aug 15, 2026</sub></td><td>Oct 15–17, 2026<br><sub>Opens soon</sub></td></tr>
 <tr><td><a href="https://emerging-researchers.org/2027-ern-conference/">Emerging Researchers National Conference in STEM</a><br><sub>AAAS / NSF EDU · Atlanta, GA</sub></td><td><a href="https://emerging-researchers.org/2027-travel-award-information/">Travel award</a><br><sub>Travel award tied to an accepted abstract · Sep 7, 2026</sub></td><td>Mar 4–6, 2027<br><sub>Grant closed</sub></td></tr>
 </tbody>
 </table>
@@ -233,7 +234,7 @@ Starting list from [BadgeUp](https://github.com/Jose-Gael-Cruz-Lopez/BadgeUp), t
 <table>
 <thead><tr><th align="left">Conference</th><th align="left">Grant</th><th align="left">When</th></tr></thead>
 <tbody>
-<tr><td><a href="https://www.effectivealtruism.org/ea-global">EA Global Travel Support</a><br><sub>Centre for Effective Altruism · New York, NY</sub></td><td><a href="https://www.effectivealtruism.org/ea-global/travel-support">Travel support</a><br><sub>Free or reduced student tickets, plus limited travel and lodging · Sep 27, 2026</sub></td><td>Oct 16–18, 2026<br><sub>Grant closed</sub></td></tr>
+<tr><td colspan="3"><sub>None listed yet.</sub></td></tr>
 </tbody>
 </table>
 

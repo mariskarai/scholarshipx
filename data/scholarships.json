@@ -102,7 +102,7 @@
     "deadline": "2026-10-31",
     "deadline_display": "Oct 31, 2026",
     "section": "STEM & Engineering",
-    "status": "OPEN",
+    "status": "CLOSING_SOON",
     "tags": [
       "Undergrad",
       "STEM"
@@ -1020,6 +1020,33 @@
     "notes": "Private, External or Outside Scholarships",
     "date_found": "2026-10-16",
     "source": "financialaid.ku.edu",
+    "expected_open": null,
+    "listing_url": ""
+  },
+  {
+    "id": "courtwright-award-for-ugdl-research-excellence",
+    "name": "Courtwright Award for UGDL Research Excellence",
+    "organization": "ku.academicworks.com",
+    "official_url": "https://ku.academicworks.com/opportunities/50289",
+    "amount": "$500",
+    "amount_value": 500,
+    "deadline": null,
+    "deadline_display": "Check site",
+    "section": "General Undergraduate",
+    "status": "OPEN",
+    "tags": [
+      "Undergrad"
+    ],
+    "eligibility": [],
+    "major_requirements": "None stated",
+    "academic_level": "Undergraduate",
+    "min_gpa": "None stated",
+    "citizenship": "None stated",
+    "essay_required": "Unknown",
+    "other_requirements": [],
+    "notes": "$500 Courtwright Award for UGDL Research Excellence “This fund shall be used to provide supplementary financial support for...",
+    "date_found": "2026-10-19",
+    "source": "ku.academicworks.com",
     "expected_open": null,
     "listing_url": ""
   }
