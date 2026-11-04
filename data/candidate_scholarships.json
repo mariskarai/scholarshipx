@@ -108,33 +108,6 @@
     "rejection_reason": null
   },
   {
-    "name": "Engineering Study Abroad Scholarship Application",
-    "amount": 500,
-    "amount_display": "$500",
-    "website": "https://ku.academicworks.com/opportunities/48928",
-    "deadline": "2026-11-01",
-    "source_url": "https://ku.academicworks.com/opportunities/48928",
-    "source_name": "ku.academicworks.com",
-    "candidate_type": "individual_scholarship",
-    "match_status": "possible_match",
-    "fit_score": 0.55,
-    "match_lanes": [
-      "Kansas / KU / Kansas City",
-      "engineering",
-      "undergraduate"
-    ],
-    "evidence_snippet": "$500 - $1,500 Engineering Study Abroad Scholarship Application DEADLINES: November 1 for programs taking place during Winter Break or... Deadline 11/01/2026",
-    "eligibility_summary": "",
-    "uncertainties": [
-      "eligibility details are sparse"
-    ],
-    "official_page_verified": true,
-    "deadline_verified": true,
-    "amount_verified": true,
-    "eligibility_verified": false,
-    "rejection_reason": null
-  },
-  {
     "name": "Undergraduate Research Awards",
     "amount": 1000,
     "amount_display": "$1,000",
@@ -202,6 +175,33 @@
       "undergraduate"
     ],
     "evidence_snippet": "$500 or less Emergency Grant Application The Emergency Grant Application is intended to assist currently... Deadline 12/10/2026",
+    "eligibility_summary": "",
+    "uncertainties": [
+      "eligibility details are sparse"
+    ],
+    "official_page_verified": true,
+    "deadline_verified": true,
+    "amount_verified": true,
+    "eligibility_verified": false,
+    "rejection_reason": null
+  },
+  {
+    "name": "Engineering Study Abroad Scholarship Application",
+    "amount": 500,
+    "amount_display": "$500",
+    "website": "https://ku.academicworks.com/opportunities/48928",
+    "deadline": "2027-11-01",
+    "source_url": "https://ku.academicworks.com/opportunities/48928",
+    "source_name": "ku.academicworks.com",
+    "candidate_type": "individual_scholarship",
+    "match_status": "possible_match",
+    "fit_score": 0.55,
+    "match_lanes": [
+      "Kansas / KU / Kansas City",
+      "engineering",
+      "undergraduate"
+    ],
+    "evidence_snippet": "$500 - $1,500 Engineering Study Abroad Scholarship Application DEADLINES: November 1 for programs taking place during Winter Break or... Deadline 11/01/2026",
     "eligibility_summary": "",
     "uncertainties": [
       "eligibility details are sparse"
