@@ -1049,5 +1049,32 @@
     "source": "ku.academicworks.com",
     "expected_open": null,
     "listing_url": ""
+  },
+  {
+    "id": "ku-freshman-scholarship-grid",
+    "name": "KU Freshman Scholarship Grid",
+    "organization": "admissions.ku.edu",
+    "official_url": "https://admissions.ku.edu/afford/scholarships",
+    "amount": "Unknown",
+    "amount_value": null,
+    "deadline": null,
+    "deadline_display": "Check site",
+    "section": "General Undergraduate",
+    "status": "OPEN",
+    "tags": [
+      "Undergrad"
+    ],
+    "eligibility": [],
+    "major_requirements": "None stated",
+    "academic_level": "Undergraduate",
+    "min_gpa": "None stated",
+    "citizenship": "None stated",
+    "essay_required": "Unknown",
+    "other_requirements": [],
+    "notes": "KU Freshman Scholarship Grid",
+    "date_found": "2026-11-07",
+    "source": "financialaid.ku.edu",
+    "expected_open": null,
+    "listing_url": ""
   }
 ]
