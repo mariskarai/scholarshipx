@@ -1076,5 +1076,32 @@
     "source": "financialaid.ku.edu",
     "expected_open": null,
     "listing_url": ""
+  },
+  {
+    "id": "null-family-scholarship",
+    "name": "Null Family Scholarship",
+    "organization": "ku.academicworks.com",
+    "official_url": "https://ku.academicworks.com/opportunities/50335",
+    "amount": "$2,000",
+    "amount_value": 2000,
+    "deadline": null,
+    "deadline_display": "Check site",
+    "section": "General Undergraduate",
+    "status": "OPEN",
+    "tags": [
+      "Undergrad"
+    ],
+    "eligibility": [],
+    "major_requirements": "None stated",
+    "academic_level": "Undergraduate",
+    "min_gpa": "None stated",
+    "citizenship": "None stated",
+    "essay_required": "Unknown",
+    "other_requirements": [],
+    "notes": "$2,000.00 Null Family Scholarship This fund shall be used to provide three, $2000 scholarships for...",
+    "date_found": "2026-11-13",
+    "source": "ku.academicworks.com",
+    "expected_open": null,
+    "listing_url": ""
   }
 ]
