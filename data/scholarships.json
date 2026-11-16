@@ -255,7 +255,7 @@
     "deadline": "2026-11-30",
     "deadline_display": "November 30.",
     "section": "STEM & Engineering",
-    "status": "OPEN",
+    "status": "CLOSING_SOON",
     "tags": [
       "Undergrad",
       "STEM"
@@ -1100,6 +1100,33 @@
     "other_requirements": [],
     "notes": "$2,000.00 Null Family Scholarship This fund shall be used to provide three, $2000 scholarships for...",
     "date_found": "2026-11-13",
+    "source": "ku.academicworks.com",
+    "expected_open": null,
+    "listing_url": ""
+  },
+  {
+    "id": "university-awards",
+    "name": "University Awards",
+    "organization": "ku.academicworks.com",
+    "official_url": "https://ku.academicworks.com/opportunities/50321",
+    "amount": "Unknown",
+    "amount_value": null,
+    "deadline": null,
+    "deadline_display": "Check site",
+    "section": "General Undergraduate",
+    "status": "OPEN",
+    "tags": [
+      "Undergrad"
+    ],
+    "eligibility": [],
+    "major_requirements": "None stated",
+    "academic_level": "Undergraduate",
+    "min_gpa": "None stated",
+    "citizenship": "None stated",
+    "essay_required": "Unknown",
+    "other_requirements": [],
+    "notes": "Varies University Awards The University Awards are among the most prestigious awards presented at... Deadline 01/21/2027",
+    "date_found": "2026-11-16",
     "source": "ku.academicworks.com",
     "expected_open": null,
     "listing_url": ""

@@ -60,7 +60,7 @@ Scholarship **Apply** links go to the sponsor, not Bold.org-style boards. Confer
 <table>
 <thead><tr><th align="left">Award</th><th align="right">Amount</th><th align="left">Deadline</th></tr></thead>
 <tbody>
-<tr><td><a href="http://golenengineservice.com">Golen Engine Scholarship</a><br><sub>Golen Engine Service · Undergrad · STEM</sub></td><td align="right">$500</td><td>November 30.<br><sub>Open</sub></td></tr>
+<tr><td><a href="http://golenengineservice.com">Golen Engine Scholarship</a><br><sub>Golen Engine Service · Undergrad · STEM</sub></td><td align="right">$500</td><td>November 30.<br><sub>Closes soon</sub></td></tr>
 <tr><td><a href="http://www.ashrae.org">ASHARE Undergraduate Engineering Scholarships</a><br><sub>American Society of Heating, Refrigerating and Air-Conditioning · Undergrad · STEM · Undergraduate</sub></td><td align="right">$3,000 $10,000</td><td>December 1.<br><sub>Open</sub></td></tr>
 <tr><td><a href="http://www.ans.org">Decommissioning and Environmental Science Division Scholarship</a><br><sub>American Nuclear Society · Undergrad</sub></td><td align="right">$2,000 $3,000</td><td>February 1.<br><sub>Open</sub></td></tr>
 <tr><td><a href="https://ku.academicworks.com/opportunities/48928">Engineering Study Abroad Scholarship Application</a><br><sub>ku.academicworks.com · Undergrad · STEM</sub></td><td align="right">$500</td><td>Check site<br><sub>Open</sub></td></tr>
@@ -134,6 +134,7 @@ Scholarship **Apply** links go to the sponsor, not Bold.org-style boards. Confer
 <tr><td><a href="https://admissions.ku.edu/transfer-scholarships">Transfer scholarships</a><br><sub>admissions.ku.edu · Undergrad · Undergraduate</sub></td><td align="right">Unknown</td><td>Check site<br><sub>Open</sub></td></tr>
 <tr><td><a href="https://ku.academicworks.com/opportunities/48932">TRIO Grant Application</a><br><sub>ku.academicworks.com · Undergrad</sub></td><td align="right">Unknown</td><td>Check site<br><sub>Open</sub></td></tr>
 <tr><td><a href="https://ku.academicworks.com/opportunities/49893">Undergraduate Research Awards</a><br><sub>ku.academicworks.com · Undergrad · Undergraduate</sub></td><td align="right">$1,000</td><td>Check site<br><sub>Open</sub></td></tr>
+<tr><td><a href="https://ku.academicworks.com/opportunities/50321">University Awards</a><br><sub>ku.academicworks.com · Undergrad</sub></td><td align="right">Unknown</td><td>Check site<br><sub>Open</sub></td></tr>
 <tr><td><a href="https://ku.academicworks.com/opportunities/49641">Ward Allen Scholarship</a><br><sub>ku.academicworks.com · Undergrad</sub></td><td align="right">$1,000</td><td>Check site<br><sub>Open</sub></td></tr>
 </tbody>
 </table>
